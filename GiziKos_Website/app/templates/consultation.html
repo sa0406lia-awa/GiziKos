@@ -22,12 +22,12 @@
       <section class="wizard-step active" data-step="0" data-title="Profil & tujuan">
         <div class="step-heading"><div><span>LANGKAH 1 DARI 4</span><h2>Profil dan tujuan utama</h2><p>Data dipakai untuk estimasi kebutuhan umum dan pemeringkatan menu, bukan diagnosis.</p></div><span class="step-icon">01</span></div>
         <div class="form-grid two">
-          <label class="field full"><span>Nama panggilan</span><input type="text" name="name" value="{% if current_user %}{{ current_user.name }}{% elif form_data %}{{ form_data.name }}{% else %}Mahasiswa{% endif %}" placeholder="Contoh: Galang" required maxlength="80"></label>
-          <label class="field"><span>Usia</span><div class="input-suffix"><input type="number" name="age" min="18" max="60" value="21" required><em>tahun</em></div></label>
-          <div class="field"><span>Jenis kelamin</span><div class="segmented"><label><input type="radio" name="gender" value="male" checked><span>Laki-laki</span></label><label><input type="radio" name="gender" value="female"><span>Perempuan</span></label></div></div>
-          <label class="field"><span>Berat badan</span><div class="input-suffix"><input type="number" name="weight" min="31" max="199" step="0.1" value="60" required><em>kg</em></div></label>
-          <label class="field"><span>Tinggi badan</span><div class="input-suffix"><input type="number" name="height" min="131" max="219" step="0.1" value="165" required><em>cm</em></div></label>
-          <label class="field full"><span>Tingkat aktivitas</span><select name="activity_level" required><option value="low">Ringan — lebih banyak duduk, jarang olahraga</option><option value="medium" selected>Sedang — kuliah aktif dan olahraga 1–3×/minggu</option><option value="high">Tinggi — olahraga atau aktivitas fisik 4–6×/minggu</option></select></label>
+          <label class="field full"><span>Nama panggilan</span><input type="text" name="name" value="{% if current_user %}{{ current_user.name }}{% elif form_data %}{{ form_data.name }}{% endif %}" placeholder="" required maxlength="80"></label>
+          <label class="field"><span>Usia</span><div class="input-suffix"><input type="number" name="age" min="18" max="60" value="{% if form_data %}{{ form_data.age }}{% endif %}" placeholder="" required><em>tahun</em></div></label>
+          <div class="field"><span>Jenis kelamin</span><div class="segmented"><label><input type="radio" name="gender" value="male" {% if form_data and form_data.gender == 'male' %}checked{% endif %}><span>Laki-laki</span></label><label><input type="radio" name="gender" value="female" {% if form_data and form_data.gender == 'female' %}checked{% endif %}><span>Perempuan</span></label></div></div>
+          <label class="field"><span>Berat badan</span><div class="input-suffix"><input type="number" name="weight" min="31" max="199" step="0.1" value="{% if form_data %}{{ form_data.weight }}{% endif %}" placeholder="" required><em>kg</em></div></label>
+          <label class="field"><span>Tinggi badan</span><div class="input-suffix"><input type="number" name="height" min="131" max="219" step="0.1" value="{% if form_data %}{{ form_data.height }}{% endif %}" placeholder="" required><em>cm</em></div></label>
+          <label class="field full"><span>Tingkat aktivitas</span><select name="activity_level" required><option value="" disabled {% if not form_data or not form_data.activity_level %}selected{% endif %}>Pilih tingkat aktivitas</option><option value="low" {% if form_data and form_data.activity_level == 'low' %}selected{% endif %}>Ringan — lebih banyak duduk, jarang olahraga</option><option value="medium" {% if form_data and form_data.activity_level == 'medium' %}selected{% endif %}>Sedang — kuliah aktif dan olahraga 1–3×/minggu</option><option value="high" {% if form_data and form_data.activity_level == 'high' %}selected{% endif %}>Tinggi — olahraga atau aktivitas fisik 4–6×/minggu</option></select></label>
         </div>
         <div class="field-group"><span class="group-label">Apa tujuan utamamu?</span><p class="group-help">Pilih satu tujuan. Penyesuaian bersifat bertahap dan informatif.</p><div class="goal-grid">
           {% for value, icon, title, desc in [
@@ -38,7 +38,7 @@
             ('muscle','◇','Mendukung massa otot','Prioritas protein dan energi yang memadai.'),
             ('hemat','Rp','Menu paling hemat','Memaksimalkan nilai gizi dalam batas biaya.')
           ] %}
-          <label class="goal-card"><input type="radio" name="goal" value="{{ value }}" {% if value == 'balanced' %}checked{% endif %}><span class="goal-icon">{{ icon }}</span><strong>{{ title }}</strong><small>{{ desc }}</small><i>✓</i></label>
+          <label class="goal-card"><input type="radio" name="goal" value="{{ value }}" {% if form_data and form_data.goal == value %}checked{% endif %}><span class="goal-icon">{{ icon }}</span><strong>{{ title }}</strong><small>{{ desc }}</small><i>✓</i></label>
           {% endfor %}
         </div></div>
       </section>
