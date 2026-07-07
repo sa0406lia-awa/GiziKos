@@ -41,13 +41,26 @@ def get_csrf_token(client, path: str) -> str:
 def register_and_login(client, email: str):
     csrf_reg = get_csrf_token(client, "/daftar")
     RATE_LIMIT_DATA.clear()
-    client.post("/daftar", data={
+    register = client.post("/daftar", data={
         "name": "Akun Tester",
         "email": email,
         "password": "Password123",
         "password_confirmation": "Password123",
         "csrf_token": csrf_reg,
-    })
+    }, follow_redirects=False)
+    assert register.status_code == 303
+    assert register.headers["location"] == "/login?next=/"
+
+    csrf_login = get_csrf_token(client, "/login")
+    RATE_LIMIT_DATA.clear()
+    login = client.post("/login", data={
+        "email": email,
+        "password": "Password123",
+        "next": "/",
+        "csrf_token": csrf_login,
+    }, follow_redirects=False)
+    assert login.status_code == 303
+    assert login.headers["location"] == "/"
 
 
 def test_health_and_public_pages():
@@ -80,9 +93,21 @@ def test_register_login_account_and_logout():
             "password": "Password123",
             "password_confirmation": "Password123",
             "csrf_token": csrf_reg,
-        })
+        }, follow_redirects=False)
         assert register.status_code == 303
-        assert register.headers["location"] == "/akun"
+        assert register.headers["location"] == "/login?next=/"
+
+        csrf_login = get_csrf_token(client, "/login")
+        RATE_LIMIT_DATA.clear()
+        login = client.post("/login", data={
+            "email": email,
+            "password": "Password123",
+            "next": "/",
+            "csrf_token": csrf_login,
+        }, follow_redirects=False)
+        assert login.status_code == 303
+        assert login.headers["location"] == "/"
+
         account = client.get("/akun")
         assert account.status_code == 200
         assert "Akun Tester" in account.text
