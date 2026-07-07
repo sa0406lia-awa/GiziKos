@@ -186,9 +186,8 @@ async def register_submit(request: Request, db: Session = Depends(get_db)):
     request.session.clear()
     if csrf_val:
         request.session["csrf_token"] = csrf_val
-    request.session["user_id"] = user.id
-    flash(request, "Akun berhasil dibuat. Selamat datang di GiziKos!")
-    return RedirectResponse("/akun", status_code=303)
+    flash(request, "Akun berhasil dibuat. Silakan masuk untuk melanjutkan.")
+    return RedirectResponse("/login?next=/", status_code=303)
 
 
 @app.get("/login", response_class=HTMLResponse)
@@ -214,7 +213,8 @@ async def login_submit(request: Request, db: Session = Depends(get_db)):
         request.session["csrf_token"] = csrf_val
     request.session["user_id"] = user.id
     flash(request, f"Selamat datang kembali, {user.name}!")
-    return RedirectResponse(next_url, status_code=303)
+    redirect_target = "/" if next_url == "/akun" else next_url
+    return RedirectResponse(redirect_target, status_code=303)
 
 
 @app.post("/logout", dependencies=[Depends(verify_csrf)])
