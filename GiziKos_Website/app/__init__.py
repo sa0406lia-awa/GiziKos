@@ -1,0 +1,1 @@
+"""GiziKos application package."""

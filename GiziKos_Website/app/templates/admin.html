@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard — GiziKos{% endblock %}
+{% block head %}
+<style>
+  .admin-tabs {
+    display: flex;
+    gap: 8px;
+    border-bottom: 2px solid var(--line, #e2e8f0);
+    margin-bottom: 32px;
+    padding-bottom: 2px;
+  }
+  .tab-btn {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    color: var(--muted, #64748b) !important;
+    padding: 12px 20px !important;
+    border-radius: 12px 12px 0 0 !important;
+    cursor: pointer !important;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  .tab-btn:hover {
+    color: var(--primary, #6366f1) !important;
+    background: var(--primary-soft, #eef2ff) !important;
+  }
+  .tab-btn.active {
+    color: var(--primary, #6366f1) !important;
+    font-weight: 800 !important;
+  }
+  .tab-btn.active::after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: -4px !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 4px !important;
+    background: var(--primary, #6366f1) !important;
+    border-radius: 99px !important;
+  }
+  .admin-tab-content {
+    display: none;
+    animation: tabFadeIn 0.3s ease;
+  }
+  .admin-tab-content.active {
+    display: block;
+  }
+  @keyframes tabFadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+{% endblock %}
+{% block content %}
+<section class="admin-hero">
+  <div class="container">
+    <div>
+      <span class="eyebrow">KNOWLEDGE BASE ADMIN</span>
+      <h1>Dashboard pengelolaan GiziKos</h1>
+    </div>
+    <form method="post" action="/admin/logout">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <button class="btn btn-secondary" type="submit">Keluar</button>
+    </form>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="metric-grid" style="margin-bottom:36px">
+      <article class="metric-card">
+        <span class="metric-icon icon-food">🥬</span>
+        <div>
+          <small>BAHAN MAKANAN</small>
+          <strong>{{ counts.foods }}</strong>
+          <p>data aktif dan nonaktif</p>
+        </div>
+      </article>
+      <article class="metric-card">
+        <span class="metric-icon icon-recipe">🍳</span>
+        <div>
+          <small>RESEP</small>
+          <strong>{{ counts.recipes }}</strong>
+          <p>basis resep</p>
+        </div>
+      </article>
+      <article class="metric-card">
+        <span class="metric-icon icon-consult">📊</span>
+        <div>
+          <small>KONSULTASI</small>
+          <strong>{{ counts.consultations }}</strong>
+          <p>tersimpan di database</p>
+        </div>
+      </article>
+      <article class="metric-card">
+        <span class="metric-icon icon-user">👤</span>
+        <div>
+          <small>PENGGUNA</small>
+          <strong>{{ counts.users }}</strong>
+          <p>akun terdaftar</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="admin-tabs" role="tablist" style="margin-top: 24px;">
+      <button class="tab-btn active" role="tab" aria-selected="true" data-tab="settings">⚙ Parameter Sistem</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="foods">🥬 Daftar Harga Bahan</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="recipes">🍳 Status Resep Aktif</button>
+    </div>
+
+    <div class="admin-tab-content admin-section active" id="settings">
+      <div class="section-heading inline">
+        <div>
+          <span class="eyebrow"><i></i>PARAMETER</span>
+          <h2>Pengaturan sistem</h2>
+        </div>
+      </div>
+      <form class="content-card" action="/admin/settings" method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <div class="form-grid two">
+          {% for setting in settings %}
+          <label class="field">
+            <span>{{ setting.key }}</span>
+            <input name="{{ setting.key }}" value="{{ setting.value }}">
+            <small>{{ setting.description }}</small>
+          </label>
+          {% endfor %}
+        </div>
+        <div style="margin-top:20px">
+          <button class="btn btn-primary" type="submit">Simpan pengaturan</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="admin-tab-content admin-section" id="foods">
+      <div class="section-heading inline">
+        <div>
+          <span class="eyebrow"><i></i>DATASET</span>
+          <h2>Harga bahan per 100 gram</h2>
+        </div>
+        <span class="muted">Ubah harga demo sesuai survei lokal.</span>
+      </div>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Bahan</th>
+              <th>Kategori</th>
+              <th>Energi</th>
+              <th>Harga/100g</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for food in foods %}
+            <tr>
+              <td><strong>{{ food.name }}</strong><small>{{ food.slug }}</small></td>
+              <td>{{ food.category }}</td>
+              <td>{{ food.energy }} kkal</td>
+              <td>
+                <form class="inline-form" method="post" action="/admin/foods/{{ food.id }}/price">
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                  <input type="number" name="price_per_100g" value="{{ food.price_per_100g|round|int }}" min="0">
+                  <button class="btn btn-xs btn-secondary">Simpan</button>
+                </form>
+              </td>
+              <td>
+                {% if food.active %}
+                <span class="status-badge success">Aktif</span>
+                {% else %}
+                <span class="status-badge">Nonaktif</span>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="admin-tab-content admin-section" id="recipes">
+      <div class="section-heading inline">
+        <div>
+          <span class="eyebrow"><i></i>BASIS RESEP</span>
+          <h2>Status resep</h2>
+        </div>
+      </div>
+      <div class="recipe-admin-grid">
+        {% for recipe in recipes %}
+        <article class="recipe-admin-card">
+          <div>
+            <span class="meal-badge">{{ recipe.meal_type }}</span>
+            <h3>{{ recipe.name }}</h3>
+            <p>{{ recipe.cooking_time }} menit • {{ recipe.tools.replace(';', ', ') }}</p>
+          </div>
+          <form method="post" action="/admin/recipes/{{ recipe.id }}/toggle">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <button class="btn btn-xs {% if recipe.active %}btn-danger-outline{% else %}btn-secondary{% endif %}" type="submit">
+              {% if recipe.active %}Nonaktifkan{% else %}Aktifkan{% endif %}
+            </button>
+          </form>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.admin-tab-content');
+
+    function switchTab(tabId) {
+      if (!tabId) return;
+      tabs.forEach(btn => {
+        const isActive = btn.getAttribute('data-tab') === tabId;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', String(isActive));
+      });
+      contents.forEach(content => {
+        content.classList.toggle('active', content.id === tabId);
+      });
+    }
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+        switchTab(tabId);
+        window.history.pushState(null, null, `#${tabId}`);
+      });
+    });
+
+    const hash = window.location.hash.substring(1);
+    if (hash && document.getElementById(hash)) {
+      switchTab(hash);
+    } else {
+      switchTab('settings');
+    }
+
+    window.addEventListener('hashchange', () => {
+      const newHash = window.location.hash.substring(1);
+      if (newHash && document.getElementById(newHash)) {
+        switchTab(newHash);
+      }
+    });
+  });
+</script>
+{% endblock %}

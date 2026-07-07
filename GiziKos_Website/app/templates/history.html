@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% block title %}Riwayat — GiziKos{% endblock %}
+{% block content %}
+
+<section class="page-hero compact">
+  <div class="container narrow">
+    <span class="eyebrow"><i></i>{% if account_history %}RIWAYAT AKUN{% else %}RIWAYAT BROWSER{% endif %}</span>
+    <h1>Rekomendasi yang pernah dibuat.</h1>
+    <p>
+      {% if account_history %}
+        Seluruh hasil berikut tersimpan pada akun Anda dan dapat diakses kapan saja.
+      {% else %}
+        Riwayat tamu hanya tersedia pada browser ini.
+        <a href="/daftar" style="color:var(--primary);font-weight:700;text-decoration:underline">Buat akun gratis</a> agar riwayat tersimpan permanen.
+      {% endif %}
+    </p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container narrow-wide">
+
+    {% if history %}
+
+    <!-- Ringkasan -->
+    <div class="history-summary-bar">
+      <div class="history-summary-item">
+        <div class="history-summary-icon icon-total">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <strong>{{ history|length }}</strong>
+          <span>Total sesi</span>
+        </div>
+      </div>
+      <div class="history-summary-item">
+        <div class="history-summary-icon icon-success">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <strong>{{ history|selectattr('status', 'equalto', 'success')|list|length }}</strong>
+          <span>Berhasil</span>
+        </div>
+      </div>
+      <div class="history-summary-item">
+        <div class="history-summary-icon icon-date">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <strong class="history-date-text">{{ history[0].created_at.strftime('%d %b %Y') if history else '—' }}</strong>
+          <span>Terakhir diakses</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Daftar Riwayat -->
+    <div class="history-section-heading">
+      <span class="eyebrow"><i></i>SEMUA SESI</span>
+      <h2>Riwayat konsultasi</h2>
+    </div>
+
+    <div class="history-list">
+      {% for item in history %}
+      <a class="history-card" href="/hasil/{{ item.id }}">
+        <div class="history-card-left">
+          <span class="status-dot {{ item.status }}"></span>
+          <div>
+            <strong>{{ item.goal or item.name }}</strong>
+            <small>{{ item.created_at.strftime('%d-%m-%Y %H:%M') }} &bull; {{ item.name }}</small>
+          </div>
+        </div>
+        <div class="history-card-right">
+          <div class="history-card-cost">
+            <small>Biaya</small>
+            <span>Rp{{ item.total_cost|format_currency }}</span>
+          </div>
+          <div class="history-card-score">
+            <small>Skor</small>
+            <strong>{{ item.average_score|round|int }}<small>/100</small></strong>
+          </div>
+          <span class="history-card-arrow">&rarr;</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    {% else %}
+
+    <!-- Empty State -->
+    <div class="history-empty-wrap">
+      <div class="empty-state">
+        <span>◎</span>
+        <h2>Belum ada riwayat</h2>
+        <p>Mulai konsultasi pertama Anda dan hasilnya akan muncul di sini secara otomatis.</p>
+        <div style="display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="/cek-gizi">Mulai cek gizi</a>
+          {% if not account_history %}
+          <a class="btn btn-ghost" href="/daftar">Buat akun gratis</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Tips -->
+      <div class="history-tips">
+        <div class="history-section-heading">
+          <span class="eyebrow"><i></i>TIPS</span>
+          <h2>Cara mendapat hasil terbaik</h2>
+        </div>
+        <div class="history-tips-grid">
+          <div class="history-tip-card">
+            <div class="history-tip-icon">🎯</div>
+            <h3>Tentukan tujuan</h3>
+            <p>Pilih tujuan yang spesifik (hemat, bergizi, atau cepat) agar rekomendasi lebih tepat.</p>
+          </div>
+          <div class="history-tip-card">
+            <div class="history-tip-icon">🛒</div>
+            <h3>Isi stok bahan</h3>
+            <p>Tandai bahan yang sudah tersedia di kos untuk mendapatkan menu yang langsung bisa dimasak.</p>
+          </div>
+          <div class="history-tip-card">
+            <div class="history-tip-icon">⚙️</div>
+            <h3>Pilih alat masak</h3>
+            <p>Sistem hanya merekomendasikan resep yang sesuai dengan alat masak yang kamu miliki.</p>
+          </div>
+          <div class="history-tip-card">
+            <div class="history-tip-icon">💰</div>
+            <h3>Set anggaran realistis</h3>
+            <p>Anggaran harian yang realistis membantu sistem memberi pilihan menu yang benar-benar bisa dimasak.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+
+    <!-- CTA Akun (hanya jika tamu dan ada riwayat) -->
+    {% if history and not account_history %}
+    <div class="history-save-banner">
+      <div>
+        <strong>Simpan riwayat secara permanen</strong>
+        <p>Riwayat tamu tersimpan di browser dan bisa hilang jika cache dihapus. Daftar akun gratis untuk menyimpan semua hasil.</p>
+      </div>
+      <a class="btn btn-primary" href="/daftar">Daftar sekarang →</a>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+{% endblock %}

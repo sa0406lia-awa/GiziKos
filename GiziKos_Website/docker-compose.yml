@@ -1,0 +1,17 @@
+services:
+  gizikos:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      GIZIKOS_SECRET_KEY: ${GIZIKOS_SECRET_KEY}
+      GIZIKOS_ADMIN_PASSWORD: ${GIZIKOS_ADMIN_PASSWORD}
+      GIZIKOS_ENV: ${GIZIKOS_ENV:-production}
+      GIZIKOS_DB_PATH: "/data/gizikos.db"
+      HOST: "0.0.0.0"
+      PORT: "8000"
+    volumes:
+      - gizikos_data:/data
+
+volumes:
+  gizikos_data:

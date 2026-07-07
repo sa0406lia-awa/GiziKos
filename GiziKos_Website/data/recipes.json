@@ -1,0 +1,2127 @@
+[
+  {
+    "id": "sarapan-nasi-telur-bayam",
+    "name": "Nasi Telur Rebus & Tumis Bayam",
+    "meal_type": "breakfast",
+    "cooking_time": 18,
+    "tools": [
+      "kompor",
+      "panci",
+      "wajan"
+    ],
+    "tags": [
+      "hemat",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        150
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "bayam",
+        80
+      ],
+      [
+        "minyak",
+        5
+      ],
+      [
+        "bawang-putih",
+        3
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Rebus telur sampai matang.",
+      "Tumis bawang putih dan bayam dengan sedikit minyak.",
+      "Sajikan bersama nasi hangat."
+    ]
+  },
+  {
+    "id": "sarapan-oat-pisang",
+    "name": "Oatmeal Susu Pisang",
+    "meal_type": "breakfast",
+    "cooking_time": 8,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "praktis",
+      "vegetarian",
+      "tinggi-serat"
+    ],
+    "ingredients": [
+      [
+        "oatmeal",
+        50
+      ],
+      [
+        "susu-uht",
+        200
+      ],
+      [
+        "pisang",
+        100
+      ]
+    ],
+    "steps": [
+      "Masak oatmeal bersama susu hingga mengental.",
+      "Tambahkan irisan pisang."
+    ]
+  },
+  {
+    "id": "sarapan-roti-telur-tomat",
+    "name": "Roti Gandum Telur & Tomat",
+    "meal_type": "breakfast",
+    "cooking_time": 12,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "praktis",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "roti-gandum",
+        70
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "tomat",
+        60
+      ],
+      [
+        "minyak",
+        3
+      ]
+    ],
+    "steps": [
+      "Masak telur dengan sedikit minyak.",
+      "Sajikan bersama roti dan irisan tomat."
+    ]
+  },
+  {
+    "id": "sarapan-nasi-tempe-pepaya",
+    "name": "Nasi Tempe Kecap & Pepaya",
+    "meal_type": "breakfast",
+    "cooking_time": 15,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "hemat",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        140
+      ],
+      [
+        "tempe",
+        70
+      ],
+      [
+        "pepaya",
+        100
+      ],
+      [
+        "kecap",
+        8
+      ],
+      [
+        "minyak",
+        3
+      ]
+    ],
+    "steps": [
+      "Tumis tempe dengan sedikit kecap.",
+      "Sajikan bersama nasi dan pepaya."
+    ]
+  },
+  {
+    "id": "sarapan-kentang-telur-wortel",
+    "name": "Kentang Telur Wortel Satu Panci",
+    "meal_type": "breakfast",
+    "cooking_time": 20,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "satu-panci",
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "kentang",
+        180
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "wortel",
+        60
+      ],
+      [
+        "bawang-putih",
+        3
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Rebus kentang dan wortel hingga lunak.",
+      "Masukkan telur, aduk, dan bumbui ringan."
+    ]
+  },
+  {
+    "id": "sarapan-yogurt-oat-apel",
+    "name": "Yogurt Oat Apel",
+    "meal_type": "breakfast",
+    "cooking_time": 5,
+    "tools": [
+      "pisau-talenan"
+    ],
+    "tags": [
+      "tanpa-masak",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "yogurt",
+        150
+      ],
+      [
+        "oatmeal",
+        35
+      ],
+      [
+        "apel",
+        100
+      ]
+    ],
+    "steps": [
+      "Potong apel.",
+      "Campurkan yogurt, oatmeal, dan apel."
+    ]
+  },
+  {
+    "id": "sarapan-ricecooker-nasi-tahu",
+    "name": "Nasi Tahu Sayur Rice Cooker",
+    "meal_type": "breakfast",
+    "cooking_time": 20,
+    "tools": [
+      "rice-cooker"
+    ],
+    "tags": [
+      "rice-cooker",
+      "vegetarian",
+      "hemat"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        140
+      ],
+      [
+        "tahu",
+        100
+      ],
+      [
+        "sawi",
+        70
+      ],
+      [
+        "kecap",
+        8
+      ],
+      [
+        "bawang-putih",
+        3
+      ]
+    ],
+    "steps": [
+      "Masukkan tahu, sawi, dan bumbu ke rice cooker.",
+      "Hangatkan bersama nasi hingga sayur layu."
+    ]
+  },
+  {
+    "id": "sarapan-roti-selai-pisang",
+    "name": "Roti Selai Kacang Pisang",
+    "meal_type": "breakfast",
+    "cooking_time": 5,
+    "tools": [
+      "pisau-talenan"
+    ],
+    "tags": [
+      "tanpa-masak",
+      "tinggi-energi",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "roti-gandum",
+        70
+      ],
+      [
+        "selai-kacang",
+        25
+      ],
+      [
+        "pisang",
+        100
+      ]
+    ],
+    "steps": [
+      "Oleskan selai kacang pada roti.",
+      "Tambahkan irisan pisang."
+    ]
+  },
+  {
+    "id": "sarapan-ubi-telur",
+    "name": "Ubi Rebus Telur & Pepaya",
+    "meal_type": "breakfast",
+    "cooking_time": 20,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "hemat",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "ubi-jalar",
+        180
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "pepaya",
+        100
+      ]
+    ],
+    "steps": [
+      "Rebus ubi dan telur sampai matang.",
+      "Sajikan bersama pepaya."
+    ]
+  },
+  {
+    "id": "sarapan-oat-microwave",
+    "name": "Oat Pisang Microwave",
+    "meal_type": "breakfast",
+    "cooking_time": 6,
+    "tools": [
+      "microwave"
+    ],
+    "tags": [
+      "praktis",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "oatmeal",
+        50
+      ],
+      [
+        "susu-uht",
+        200
+      ],
+      [
+        "pisang",
+        90
+      ]
+    ],
+    "steps": [
+      "Campur oatmeal dan susu dalam mangkuk aman microwave.",
+      "Panaskan bertahap lalu tambahkan pisang."
+    ]
+  },
+  {
+    "id": "sarapan-sandwich-tuna",
+    "name": "Sandwich Tuna Timun",
+    "meal_type": "breakfast",
+    "cooking_time": 10,
+    "tools": [
+      "sandwich-maker",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "praktis",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "roti-gandum",
+        70
+      ],
+      [
+        "tuna-kaleng",
+        70
+      ],
+      [
+        "timun",
+        50
+      ],
+      [
+        "tomat",
+        40
+      ]
+    ],
+    "steps": [
+      "Susun tuna, timun, dan tomat di antara roti.",
+      "Panggang dengan sandwich maker."
+    ]
+  },
+  {
+    "id": "sarapan-kettle-oat",
+    "name": "Oat Seduh Pisang Susu",
+    "meal_type": "breakfast",
+    "cooking_time": 7,
+    "tools": [
+      "ketel-listrik"
+    ],
+    "tags": [
+      "praktis",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "oatmeal",
+        50
+      ],
+      [
+        "susu-uht",
+        150
+      ],
+      [
+        "pisang",
+        100
+      ]
+    ],
+    "steps": [
+      "Seduh oatmeal dengan air panas secukupnya.",
+      "Tambahkan susu dan pisang."
+    ]
+  },
+  {
+    "id": "sarapan-airfryer-kentang-tempe",
+    "name": "Kentang Tempe Air Fryer",
+    "meal_type": "breakfast",
+    "cooking_time": 20,
+    "tools": [
+      "air-fryer",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "vegetarian",
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "kentang",
+        160
+      ],
+      [
+        "tempe",
+        80
+      ],
+      [
+        "tomat",
+        60
+      ],
+      [
+        "minyak",
+        3
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Potong kentang dan tempe.",
+      "Masak di air fryer hingga matang.",
+      "Sajikan dengan tomat."
+    ]
+  },
+  {
+    "id": "sarapan-roti-keju-apel",
+    "name": "Roti Keju Apel",
+    "meal_type": "breakfast",
+    "cooking_time": 5,
+    "tools": [
+      "pisau-talenan"
+    ],
+    "tags": [
+      "tanpa-masak",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "roti-gandum",
+        70
+      ],
+      [
+        "keju",
+        25
+      ],
+      [
+        "apel",
+        100
+      ]
+    ],
+    "steps": [
+      "Susun keju pada roti.",
+      "Sajikan bersama apel."
+    ]
+  },
+  {
+    "id": "sarapan-smoothie-oat",
+    "name": "Smoothie Pisang Oat Susu",
+    "meal_type": "breakfast",
+    "cooking_time": 6,
+    "tools": [
+      "blender"
+    ],
+    "tags": [
+      "praktis",
+      "vegetarian",
+      "tinggi-energi"
+    ],
+    "ingredients": [
+      [
+        "pisang",
+        120
+      ],
+      [
+        "oatmeal",
+        40
+      ],
+      [
+        "susu-uht",
+        250
+      ]
+    ],
+    "steps": [
+      "Masukkan semua bahan ke blender.",
+      "Blender hingga halus."
+    ]
+  },
+  {
+    "id": "siang-ayam-bayam",
+    "name": "Nasi Ayam Tumis Bayam",
+    "meal_type": "lunch",
+    "cooking_time": 25,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        200
+      ],
+      [
+        "ayam-dada",
+        100
+      ],
+      [
+        "bayam",
+        100
+      ],
+      [
+        "minyak",
+        7
+      ],
+      [
+        "bawang-putih",
+        4
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Tumis ayam hingga matang.",
+      "Masukkan bayam dan bumbu.",
+      "Sajikan bersama nasi."
+    ]
+  },
+  {
+    "id": "siang-tempe-kangkung",
+    "name": "Nasi Tempe Kecap Kangkung",
+    "meal_type": "lunch",
+    "cooking_time": 20,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "hemat",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        200
+      ],
+      [
+        "tempe",
+        100
+      ],
+      [
+        "kangkung",
+        100
+      ],
+      [
+        "kecap",
+        10
+      ],
+      [
+        "minyak",
+        5
+      ],
+      [
+        "bawang-putih",
+        4
+      ]
+    ],
+    "steps": [
+      "Tumis tempe hingga kecokelatan.",
+      "Masukkan kangkung dan kecap.",
+      "Sajikan bersama nasi."
+    ]
+  },
+  {
+    "id": "siang-ricecooker-sarden",
+    "name": "Nasi Sarden Sayur Rice Cooker",
+    "meal_type": "lunch",
+    "cooking_time": 20,
+    "tools": [
+      "rice-cooker"
+    ],
+    "tags": [
+      "rice-cooker",
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        200
+      ],
+      [
+        "sarden",
+        90
+      ],
+      [
+        "sawi",
+        90
+      ],
+      [
+        "tomat",
+        50
+      ]
+    ],
+    "steps": [
+      "Masukkan sarden, sawi, dan tomat ke rice cooker.",
+      "Hangatkan bersama nasi sampai sayur matang."
+    ]
+  },
+  {
+    "id": "siang-mie-telur-sawi",
+    "name": "Mi Telur Sawi & Tauge",
+    "meal_type": "lunch",
+    "cooking_time": 15,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "mie-kering",
+        90
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "sawi",
+        80
+      ],
+      [
+        "tauge",
+        70
+      ],
+      [
+        "bawang-putih",
+        3
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Rebus mi dan sayur.",
+      "Masukkan telur lalu bumbui ringan."
+    ]
+  },
+  {
+    "id": "siang-tahu-buncis",
+    "name": "Nasi Tahu Buncis Saus Kecap",
+    "meal_type": "lunch",
+    "cooking_time": 22,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "hemat",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        200
+      ],
+      [
+        "tahu",
+        130
+      ],
+      [
+        "buncis",
+        100
+      ],
+      [
+        "kecap",
+        10
+      ],
+      [
+        "minyak",
+        5
+      ],
+      [
+        "bawang-putih",
+        4
+      ]
+    ],
+    "steps": [
+      "Tumis tahu dan buncis.",
+      "Tambahkan kecap serta sedikit air.",
+      "Sajikan bersama nasi."
+    ]
+  },
+  {
+    "id": "siang-ikan-sawi",
+    "name": "Nasi Ikan Kembung & Sawi",
+    "meal_type": "lunch",
+    "cooking_time": 28,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        200
+      ],
+      [
+        "ikan-kembung",
+        100
+      ],
+      [
+        "sawi",
+        100
+      ],
+      [
+        "minyak",
+        6
+      ],
+      [
+        "bawang-putih",
+        4
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Masak ikan hingga matang.",
+      "Tumis sawi ringan.",
+      "Sajikan bersama nasi."
+    ]
+  },
+  {
+    "id": "siang-tuna-ricebowl",
+    "name": "Rice Bowl Tuna Timun Tomat",
+    "meal_type": "lunch",
+    "cooking_time": 8,
+    "tools": [
+      "pisau-talenan"
+    ],
+    "tags": [
+      "tanpa-masak",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        200
+      ],
+      [
+        "tuna-kaleng",
+        90
+      ],
+      [
+        "timun",
+        70
+      ],
+      [
+        "tomat",
+        60
+      ],
+      [
+        "saus-tomat",
+        10
+      ]
+    ],
+    "steps": [
+      "Potong timun dan tomat.",
+      "Susun tuna dan sayur di atas nasi."
+    ]
+  },
+  {
+    "id": "siang-lele-airfryer",
+    "name": "Nasi Lele Air Fryer & Lalapan",
+    "meal_type": "lunch",
+    "cooking_time": 25,
+    "tools": [
+      "air-fryer",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        200
+      ],
+      [
+        "ikan-lele",
+        110
+      ],
+      [
+        "timun",
+        70
+      ],
+      [
+        "tomat",
+        60
+      ],
+      [
+        "minyak",
+        3
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Bumbui lele ringan dan masak dengan air fryer.",
+      "Sajikan bersama nasi dan lalapan."
+    ]
+  },
+  {
+    "id": "siang-bihun-tahu",
+    "name": "Bihun Tahu Sayur",
+    "meal_type": "lunch",
+    "cooking_time": 18,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "vegetarian",
+      "hemat"
+    ],
+    "ingredients": [
+      [
+        "bihun",
+        90
+      ],
+      [
+        "tahu",
+        120
+      ],
+      [
+        "sawi",
+        80
+      ],
+      [
+        "wortel",
+        60
+      ],
+      [
+        "bawang-putih",
+        4
+      ],
+      [
+        "kecap",
+        8
+      ]
+    ],
+    "steps": [
+      "Seduh atau rebus bihun.",
+      "Masak tahu dan sayur dalam satu panci.",
+      "Campurkan dan bumbui."
+    ]
+  },
+  {
+    "id": "siang-ricecooker-ayam",
+    "name": "Nasi Ayam Sayur Rice Cooker",
+    "meal_type": "lunch",
+    "cooking_time": 30,
+    "tools": [
+      "rice-cooker"
+    ],
+    "tags": [
+      "rice-cooker",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        200
+      ],
+      [
+        "ayam-suwir",
+        90
+      ],
+      [
+        "wortel",
+        70
+      ],
+      [
+        "sawi",
+        80
+      ],
+      [
+        "kecap",
+        8
+      ]
+    ],
+    "steps": [
+      "Masukkan ayam suwir dan sayur ke rice cooker.",
+      "Hangatkan bersama nasi sampai sayur lunak."
+    ]
+  },
+  {
+    "id": "siang-tempe-brokoli",
+    "name": "Nasi Tempe Brokoli",
+    "meal_type": "lunch",
+    "cooking_time": 22,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "vegetarian",
+      "tinggi-serat"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        190
+      ],
+      [
+        "tempe",
+        100
+      ],
+      [
+        "brokoli",
+        110
+      ],
+      [
+        "kecap",
+        8
+      ],
+      [
+        "minyak",
+        5
+      ],
+      [
+        "bawang-putih",
+        4
+      ]
+    ],
+    "steps": [
+      "Tumis tempe dan brokoli.",
+      "Tambahkan kecap dan sedikit air.",
+      "Sajikan bersama nasi."
+    ]
+  },
+  {
+    "id": "siang-mie-instan-upgrade",
+    "name": "Mi Instan Upgrade Telur Sayur",
+    "meal_type": "lunch",
+    "cooking_time": 12,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "mie-instan",
+        80
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "sawi",
+        100
+      ],
+      [
+        "tauge",
+        70
+      ]
+    ],
+    "steps": [
+      "Rebus mi dengan setengah bumbu.",
+      "Tambahkan telur, sawi, dan tauge."
+    ]
+  },
+  {
+    "id": "siang-kentang-ayam",
+    "name": "Sup Kentang Ayam Wortel",
+    "meal_type": "lunch",
+    "cooking_time": 30,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "satu-panci",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "kentang",
+        220
+      ],
+      [
+        "ayam-dada",
+        100
+      ],
+      [
+        "wortel",
+        80
+      ],
+      [
+        "kol",
+        80
+      ],
+      [
+        "bawang-putih",
+        4
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Rebus ayam dan kentang.",
+      "Tambahkan wortel, kol, serta bumbu."
+    ]
+  },
+  {
+    "id": "siang-sandwich-ayam",
+    "name": "Sandwich Ayam Sayur",
+    "meal_type": "lunch",
+    "cooking_time": 12,
+    "tools": [
+      "sandwich-maker",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "praktis",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "roti-gandum",
+        100
+      ],
+      [
+        "ayam-suwir",
+        90
+      ],
+      [
+        "tomat",
+        50
+      ],
+      [
+        "timun",
+        50
+      ],
+      [
+        "keju",
+        20
+      ]
+    ],
+    "steps": [
+      "Susun ayam, sayur, dan keju pada roti.",
+      "Panggang dengan sandwich maker."
+    ]
+  },
+  {
+    "id": "siang-microwave-tahu",
+    "name": "Nasi Tahu Jamur Microwave",
+    "meal_type": "lunch",
+    "cooking_time": 12,
+    "tools": [
+      "microwave"
+    ],
+    "tags": [
+      "vegetarian",
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        200
+      ],
+      [
+        "tahu",
+        130
+      ],
+      [
+        "jamur",
+        100
+      ],
+      [
+        "sawi",
+        80
+      ],
+      [
+        "kecap",
+        8
+      ]
+    ],
+    "steps": [
+      "Campur tahu, jamur, sawi, dan kecap.",
+      "Panaskan dalam wadah aman microwave sampai matang.",
+      "Sajikan dengan nasi."
+    ]
+  },
+  {
+    "id": "malam-nasi-telur-kol",
+    "name": "Nasi Telur Orak-arik Kol",
+    "meal_type": "dinner",
+    "cooking_time": 15,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "hemat",
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        170
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "kol",
+        100
+      ],
+      [
+        "tomat",
+        50
+      ],
+      [
+        "minyak",
+        5
+      ],
+      [
+        "bawang-putih",
+        3
+      ]
+    ],
+    "steps": [
+      "Tumis kol dan tomat.",
+      "Masukkan telur dan aduk hingga matang.",
+      "Sajikan dengan nasi."
+    ]
+  },
+  {
+    "id": "malam-tahu-sayur-bening",
+    "name": "Nasi Tahu Sayur Bening",
+    "meal_type": "dinner",
+    "cooking_time": 22,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "hemat",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        170
+      ],
+      [
+        "tahu",
+        120
+      ],
+      [
+        "bayam",
+        90
+      ],
+      [
+        "jagung",
+        60
+      ],
+      [
+        "bawang-merah",
+        3
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Rebus jagung dan bumbu.",
+      "Masukkan tahu serta bayam.",
+      "Sajikan bersama nasi."
+    ]
+  },
+  {
+    "id": "malam-ricecooker-tempe",
+    "name": "Nasi Tempe Tauge Rice Cooker",
+    "meal_type": "dinner",
+    "cooking_time": 18,
+    "tools": [
+      "rice-cooker"
+    ],
+    "tags": [
+      "rice-cooker",
+      "vegetarian",
+      "hemat"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        170
+      ],
+      [
+        "tempe",
+        90
+      ],
+      [
+        "tauge",
+        100
+      ],
+      [
+        "kecap",
+        8
+      ],
+      [
+        "bawang-putih",
+        3
+      ]
+    ],
+    "steps": [
+      "Masukkan tempe, tauge, dan bumbu ke rice cooker.",
+      "Hangatkan hingga tauge matang."
+    ]
+  },
+  {
+    "id": "malam-ikan-kangkung",
+    "name": "Nasi Ikan & Kangkung",
+    "meal_type": "dinner",
+    "cooking_time": 25,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        170
+      ],
+      [
+        "ikan-kembung",
+        90
+      ],
+      [
+        "kangkung",
+        100
+      ],
+      [
+        "minyak",
+        6
+      ],
+      [
+        "bawang-putih",
+        4
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Masak ikan sampai matang.",
+      "Tumis kangkung ringan.",
+      "Sajikan bersama nasi."
+    ]
+  },
+  {
+    "id": "malam-oat-telur-sayur",
+    "name": "Oat Gurih Telur Sayur",
+    "meal_type": "dinner",
+    "cooking_time": 12,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "oatmeal",
+        60
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "wortel",
+        60
+      ],
+      [
+        "sawi",
+        80
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Masak oatmeal dengan air.",
+      "Tambahkan telur dan sayur, lalu bumbui."
+    ]
+  },
+  {
+    "id": "malam-roti-tuna-salad",
+    "name": "Roti Tuna Salad Kos",
+    "meal_type": "dinner",
+    "cooking_time": 8,
+    "tools": [
+      "pisau-talenan"
+    ],
+    "tags": [
+      "tanpa-masak",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "roti-gandum",
+        90
+      ],
+      [
+        "tuna-kaleng",
+        80
+      ],
+      [
+        "timun",
+        60
+      ],
+      [
+        "tomat",
+        60
+      ]
+    ],
+    "steps": [
+      "Potong sayur.",
+      "Campur dengan tuna dan sajikan bersama roti."
+    ]
+  },
+  {
+    "id": "malam-ubi-tempe",
+    "name": "Ubi Tempe Kangkung",
+    "meal_type": "dinner",
+    "cooking_time": 24,
+    "tools": [
+      "kompor",
+      "panci",
+      "wajan"
+    ],
+    "tags": [
+      "vegetarian",
+      "hemat"
+    ],
+    "ingredients": [
+      [
+        "ubi-jalar",
+        200
+      ],
+      [
+        "tempe",
+        90
+      ],
+      [
+        "kangkung",
+        100
+      ],
+      [
+        "minyak",
+        5
+      ],
+      [
+        "bawang-putih",
+        4
+      ]
+    ],
+    "steps": [
+      "Rebus ubi hingga matang.",
+      "Tumis tempe dan kangkung.",
+      "Sajikan bersama."
+    ]
+  },
+  {
+    "id": "malam-airfryer-ayam",
+    "name": "Ayam Kentang Air Fryer & Timun",
+    "meal_type": "dinner",
+    "cooking_time": 25,
+    "tools": [
+      "air-fryer",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "tinggi-protein",
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "ayam-dada",
+        100
+      ],
+      [
+        "kentang",
+        180
+      ],
+      [
+        "timun",
+        70
+      ],
+      [
+        "tomat",
+        50
+      ],
+      [
+        "minyak",
+        3
+      ]
+    ],
+    "steps": [
+      "Potong kentang dan bumbui ayam.",
+      "Masak keduanya dengan air fryer.",
+      "Sajikan bersama lalapan."
+    ]
+  },
+  {
+    "id": "malam-bihun-telur",
+    "name": "Bihun Telur Sayur",
+    "meal_type": "dinner",
+    "cooking_time": 15,
+    "tools": [
+      "kompor",
+      "panci"
+    ],
+    "tags": [
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "bihun",
+        80
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "sawi",
+        80
+      ],
+      [
+        "wortel",
+        60
+      ],
+      [
+        "bawang-putih",
+        3
+      ]
+    ],
+    "steps": [
+      "Rebus bihun dan sayur.",
+      "Masukkan telur, aduk, dan bumbui."
+    ]
+  },
+  {
+    "id": "malam-ricecooker-sup",
+    "name": "Sup Tahu Kentang Rice Cooker",
+    "meal_type": "dinner",
+    "cooking_time": 25,
+    "tools": [
+      "rice-cooker"
+    ],
+    "tags": [
+      "vegetarian",
+      "rice-cooker"
+    ],
+    "ingredients": [
+      [
+        "kentang",
+        180
+      ],
+      [
+        "tahu",
+        120
+      ],
+      [
+        "wortel",
+        70
+      ],
+      [
+        "kol",
+        80
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Masukkan semua bahan dan air ke rice cooker.",
+      "Masak hingga kentang lunak."
+    ]
+  },
+  {
+    "id": "malam-tumis-jamur-tempe",
+    "name": "Nasi Tumis Jamur Tempe",
+    "meal_type": "dinner",
+    "cooking_time": 20,
+    "tools": [
+      "kompor",
+      "wajan"
+    ],
+    "tags": [
+      "vegetarian",
+      "tinggi-protein"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        170
+      ],
+      [
+        "tempe",
+        90
+      ],
+      [
+        "jamur",
+        110
+      ],
+      [
+        "sawi",
+        80
+      ],
+      [
+        "kecap",
+        8
+      ],
+      [
+        "minyak",
+        5
+      ]
+    ],
+    "steps": [
+      "Tumis tempe dan jamur.",
+      "Masukkan sawi dan kecap.",
+      "Sajikan dengan nasi."
+    ]
+  },
+  {
+    "id": "malam-microwave-telur",
+    "name": "Nasi Telur Sayur Microwave",
+    "meal_type": "dinner",
+    "cooking_time": 10,
+    "tools": [
+      "microwave"
+    ],
+    "tags": [
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        170
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "bayam",
+        80
+      ],
+      [
+        "tomat",
+        50
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Campur telur, bayam, dan tomat dalam wadah aman microwave.",
+      "Panaskan bertahap sampai telur matang.",
+      "Sajikan dengan nasi."
+    ]
+  },
+  {
+    "id": "malam-sandwich-tempe",
+    "name": "Sandwich Tempe Keju Sayur",
+    "meal_type": "dinner",
+    "cooking_time": 12,
+    "tools": [
+      "sandwich-maker",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "vegetarian",
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "roti-gandum",
+        90
+      ],
+      [
+        "tempe",
+        80
+      ],
+      [
+        "keju",
+        20
+      ],
+      [
+        "tomat",
+        50
+      ],
+      [
+        "timun",
+        50
+      ]
+    ],
+    "steps": [
+      "Iris tempe matang dan sayur.",
+      "Susun semua bahan pada roti lalu panggang."
+    ]
+  },
+  {
+    "id": "malam-kettle-bihun",
+    "name": "Bihun Seduh Tuna Sayur",
+    "meal_type": "dinner",
+    "cooking_time": 10,
+    "tools": [
+      "ketel-listrik"
+    ],
+    "tags": [
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "bihun",
+        80
+      ],
+      [
+        "tuna-kaleng",
+        80
+      ],
+      [
+        "sawi",
+        70
+      ],
+      [
+        "wortel",
+        50
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Seduh bihun dan sayur dengan air mendidih dalam wadah tertutup.",
+      "Tiriskan lalu tambahkan tuna dan bumbu ringan."
+    ]
+  },
+  {
+    "id": "malam-salad-tahu-roti",
+    "name": "Salad Tahu Roti & Buah",
+    "meal_type": "dinner",
+    "cooking_time": 8,
+    "tools": [
+      "pisau-talenan"
+    ],
+    "tags": [
+      "tanpa-masak",
+      "vegetarian"
+    ],
+    "ingredients": [
+      [
+        "roti-gandum",
+        80
+      ],
+      [
+        "tahu",
+        120
+      ],
+      [
+        "timun",
+        70
+      ],
+      [
+        "tomat",
+        60
+      ],
+      [
+        "pepaya",
+        100
+      ]
+    ],
+    "steps": [
+      "Gunakan tahu matang siap makan.",
+      "Potong bahan dan susun bersama roti serta buah."
+    ]
+  },
+  {
+    "id": "malam-nasgor-tempe-telur",
+    "name": "Nasi Goreng Tempe & Telur Orak-Arik",
+    "meal_type": "dinner",
+    "cooking_time": 15,
+    "tools": [
+      "kompor",
+      "wajan",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "hemat",
+      "tinggi-protein",
+      "praktis"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        150
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "tempe",
+        60
+      ],
+      [
+        "minyak",
+        5
+      ],
+      [
+        "bawang-merah",
+        5
+      ],
+      [
+        "bawang-putih",
+        3
+      ],
+      [
+        "kecap",
+        10
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Potong tempe dadu kecil, tumis hingga setengah matang.",
+      "Masukkan telur ayam, orak-arik hingga matang.",
+      "Masukkan nasi putih, bawang merah, bawang putih iris, garam, dan kecap manis.",
+      "Aduk rata hingga semua bumbu meresap, lalu sajikan hangat."
+    ]
+  },
+  {
+    "id": "siang-tumis-kacangpanjang-tempe",
+    "name": "Tumis Kacang Panjang & Tempe Hemat",
+    "meal_type": "lunch",
+    "cooking_time": 15,
+    "tools": [
+      "kompor",
+      "wajan",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "hemat",
+      "vegetarian",
+      "tinggi-serat"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        150
+      ],
+      [
+        "kacang-panjang",
+        100
+      ],
+      [
+        "tempe",
+        80
+      ],
+      [
+        "minyak",
+        5
+      ],
+      [
+        "bawang-merah",
+        5
+      ],
+      [
+        "bawang-putih",
+        3
+      ],
+      [
+        "kecap",
+        10
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Potong kacang panjang ukuran korek api dan tempe bentuk dadu.",
+      "Tumis bawang merah dan bawang putih hingga harum.",
+      "Masukkan tempe, kacang panjang, kecap manis, garam, dan sedikit air.",
+      "Masak hingga sayur matang dan bumbu meresap."
+    ]
+  },
+  {
+    "id": "siang-bihun-goreng-telur-kol",
+    "name": "Bihun Goreng Telur & Kol",
+    "meal_type": "lunch",
+    "cooking_time": 15,
+    "tools": [
+      "kompor",
+      "wajan",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "praktis",
+      "hemat",
+      "cepat"
+    ],
+    "ingredients": [
+      [
+        "bihun",
+        80
+      ],
+      [
+        "telur",
+        60
+      ],
+      [
+        "kol",
+        50
+      ],
+      [
+        "wortel",
+        40
+      ],
+      [
+        "minyak",
+        5
+      ],
+      [
+        "kecap",
+        8
+      ],
+      [
+        "bawang-putih",
+        3
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Rendam bihun dengan air hangat hingga lunak, tiriskan.",
+      "Tumis bawang putih iris, masukkan telur, buat orak-arik.",
+      "Tambahkan irisan kol dan wortel, tumis hingga sedikit layu.",
+      "Masukkan bihun, kecap manis, dan garam. Aduk cepat hingga rata."
+    ]
+  },
+  {
+    "id": "malam-sup-bayam-tahu",
+    "name": "Sup Bayam Tahu Bening Segar",
+    "meal_type": "dinner",
+    "cooking_time": 12,
+    "tools": [
+      "kompor",
+      "panci",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "hemat",
+      "vegetarian",
+      "sederhana"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        150
+      ],
+      [
+        "bayam",
+        80
+      ],
+      [
+        "tahu",
+        100
+      ],
+      [
+        "bawang-merah",
+        3
+      ],
+      [
+        "bawang-putih",
+        3
+      ],
+      [
+        "garam",
+        1
+      ],
+      [
+        "kaldu-bubuk",
+        2
+      ]
+    ],
+    "steps": [
+      "Didihkan air dalam panci bersama bawang merah dan bawang putih iris.",
+      "Masukkan tahu yang dipotong dadu, lalu masukkan bayam.",
+      "Bumbui dengan garam and kaldu bubuk.",
+      "Masak sebentar hingga bayam matang, sajikan hangat bersama nasi."
+    ]
+  },
+  {
+    "id": "malam-nasi-lele-goreng",
+    "name": "Nasi Lele Goreng Lalapan Segar",
+    "meal_type": "dinner",
+    "cooking_time": 20,
+    "tools": [
+      "kompor",
+      "wajan",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "tinggi-protein",
+      "tradisional"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        150
+      ],
+      [
+        "ikan-lele",
+        120
+      ],
+      [
+        "minyak",
+        10
+      ],
+      [
+        "kol",
+        30
+      ],
+      [
+        "timun",
+        40
+      ],
+      [
+        "garam",
+        2
+      ]
+    ],
+    "steps": [
+      "Bersihkan ikan lele dan bumbui ringan dengan garam.",
+      "Goreng lele dalam minyak panas hingga garing dan matang merata.",
+      "Tiriskan lele goreng.",
+      "Sajikan bersama nasi hangat, irisan kol, dan timun sebagai lalapan."
+    ]
+  },
+  {
+    "id": "malam-lodeh-tahu-labusiam",
+    "name": "Sayur Lodeh Tahu & Labu Siam",
+    "meal_type": "dinner",
+    "cooking_time": 25,
+    "tools": [
+      "kompor",
+      "panci",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "vegetarian",
+      "gurih"
+    ],
+    "ingredients": [
+      [
+        "nasi-putih",
+        150
+      ],
+      [
+        "tahu",
+        100
+      ],
+      [
+        "labu-siam",
+        80
+      ],
+      [
+        "santan-instan",
+        30
+      ],
+      [
+        "bawang-merah",
+        5
+      ],
+      [
+        "bawang-putih",
+        3
+      ],
+      [
+        "garam",
+        1
+      ]
+    ],
+    "steps": [
+      "Potong tahu dadu dan labu siam memanjang tipis.",
+      "Rebus air bersama irisan bawang merah dan bawang putih hingga harum.",
+      "Masukkan labu siam dan tahu, masak hingga setengah matang.",
+      "Tambahkan santan instan dan garam, aduk terus agar santan tidak pecah hingga matang."
+    ]
+  },
+  {
+    "id": "sarapan-oat-susu-apel-kayumanis",
+    "name": "Oatmeal Susu & Apel Manis",
+    "meal_type": "breakfast",
+    "cooking_time": 8,
+    "tools": [
+      "kompor",
+      "panci",
+      "pisau-talenan"
+    ],
+    "tags": [
+      "praktis",
+      "vegetarian",
+      "tinggi-serat"
+    ],
+    "ingredients": [
+      [
+        "oatmeal",
+        50
+      ],
+      [
+        "susu-uht",
+        200
+      ],
+      [
+        "apel",
+        100
+      ],
+      [
+        "gula",
+        5
+      ]
+    ],
+    "steps": [
+      "Potong apel bentuk dadu kecil.",
+      "Masak oatmeal bersama susu UHT dan gula pasir di panci hingga mengental.",
+      "Masukkan apel, aduk sebentar, lalu sajikan selagi hangat."
+    ]
+  }
+]

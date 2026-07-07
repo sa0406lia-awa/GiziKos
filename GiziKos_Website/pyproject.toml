@@ -1,0 +1,10 @@
+[project]
+name = "gizikos"
+version = "3.2.3"
+
+description = "Sistem pakar rekomendasi menu seimbang dan hemat untuk mahasiswa kos"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

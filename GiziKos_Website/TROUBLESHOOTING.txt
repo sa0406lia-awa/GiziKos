@@ -1,0 +1,26 @@
+GIZIKOS 3.2.3 — PEMECAHAN MASALAH
+
+1. TAMPILAN MASIH VERSI LAMA
+   - Pastikan menjalankan start.bat dari folder GiziKos 3.2.3.
+   - Tutup CMD GiziKos versi lama.
+   - Tekan Ctrl + F5 pada browser.
+   - Jangan mengekstrak ZIP di atas folder versi lama; gunakan folder baru.
+
+2. PORT 8000 SEDANG DIPAKAI
+   - GiziKos 3.2.3 otomatis memilih port berikutnya yang kosong.
+
+   - Lihat alamat lengkap pada jendela CMD, misalnya http://127.0.0.1:8001.
+
+3. BROWSER TIDAK TERBUKA OTOMATIS
+   - Salin alamat yang tercetak pada CMD dan buka secara manual.
+
+4. PYTHON TIDAK DIKENALI
+   - Instal Python 3.11+ dan centang Add Python to PATH.
+
+5. RESET DATABASE DEMO
+   - Tutup server.
+   - Hapus file gizikos.db.
+   - Jalankan kembali start.bat. Database akan dibuat ulang.
+
+6. VERIFIKASI
+   Jalankan: python verify.py

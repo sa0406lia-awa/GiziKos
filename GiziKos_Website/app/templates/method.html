@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+{% block title %}Metode Sistem Pakar — GiziKos{% endblock %}
+{% block content %}
+<section class="page-hero compact"><div class="container narrow"><span class="eyebrow">METODOLOGI AI</span><h1>Keputusan yang dapat dilacak, bukan rekomendasi acak.</h1><p>GiziKos menggabungkan Forward Chaining untuk batas wajib dan Fuzzy Logic untuk pemeringkatan menu.</p></div></section>
+<section class="section-pad"><div class="container">
+  <div class="method-flow">
+    <div class="flow-node"><span class="flow-step">1</span><strong>Input pengguna</strong><small>Profil, anggaran, alergi, alat, bahan</small></div>
+    <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="flow-node"><span class="flow-step">2</span><strong>Fakta awal</strong><small>Data diubah menjadi fakta sistem</small></div>
+    <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="flow-node"><span class="flow-step">3</span><strong>Forward Chaining</strong><small>Aturan IF–THEN dijalankan</small></div>
+    <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="flow-node"><span class="flow-step">4</span><strong>Fuzzy scoring</strong><small>Kandidat menu diberi skor</small></div>
+    <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="flow-node"><span class="flow-step">5</span><strong>Output</strong><small>Menu, biaya, alasan, belanja</small></div>
+  </div>
+
+  <div class="two-col method-section">
+    <div class="content-card">
+      <span class="eyebrow"><i></i>HARD CONSTRAINT</span>
+      <h2>Forward Chaining</h2>
+      <p>Mesin inferensi memulai proses dari fakta pengguna. Setiap aturan yang kondisinya terpenuhi akan menambah fakta baru sampai tidak ada fakta baru yang dapat diturunkan.</p>
+      <pre><code>IF alergi_kacang
+AND menu_mengandung_kacang
+THEN menu_ditolak
+
+IF biaya_menu &lt;= anggaran
+AND alat_tersedia
+AND waktu_sesuai
+THEN menu_lolos</code></pre>
+      <p>Prioritas aturan: ruang lingkup medis → alergi → preferensi → alat → waktu → anggaran → komposisi.</p>
+    </div>
+    <div class="content-card">
+      <span class="eyebrow"><i></i>SOFT CONSTRAINT</span>
+      <h2>Fuzzy Logic</h2>
+      <p>Menu yang lolos tidak langsung dipilih. Sistem menghitung derajat kecocokan pada anggaran, waktu, dan ketersediaan bahan.</p>
+      <div class="fuzzy-demo">
+        <div class="fuzzy-item">
+          <div class="fuzzy-label"><span>Anggaran sesuai</span><strong>Tinggi</strong></div>
+          <div class="mini-bar"><i style="width:88%"></i></div>
+        </div>
+        <div class="fuzzy-item">
+          <div class="fuzzy-label"><span>Waktu sesuai</span><strong>Sedang</strong></div>
+          <div class="mini-bar"><i style="width:67%"></i></div>
+        </div>
+        <div class="fuzzy-item">
+          <div class="fuzzy-label"><span>Bahan tersedia</span><strong>Tinggi</strong></div>
+          <div class="mini-bar"><i style="width:82%"></i></div>
+        </div>
+        <div class="fuzzy-item">
+          <div class="fuzzy-label"><span>Sesuai tujuan</span><strong>Tinggi</strong></div>
+          <div class="mini-bar"><i style="width:90%"></i></div>
+        </div>
+      </div>
+      <p>Nilai rule fuzzy didefuzzifikasi menjadi skor 0–100, lalu digabung dengan skor keseimbangan nutrisi.</p>
+    </div>
+  </div>
+
+  <div class="section-heading center top-gap"><span class="eyebrow"><i></i>CONTOH ATURAN</span><h2>Basis pengetahuan yang digunakan</h2><p>Aturan hard constraint menolak menu yang melanggar batas, sedangkan fuzzy rules memeringkat kandidat yang lolos.</p></div>
+
+  <div class="rules-section">
+    <div class="rules-group">
+      <div class="rules-group-header">
+        <span class="rules-group-icon rules-icon-reject">✕</span>
+        <div>
+          <h3>Hard Constraints — Batas Wajib</h3>
+          <p>Aturan IF–THEN yang menolak menu secara absolut jika kondisi terpenuhi.</p>
+        </div>
+      </div>
+      <div class="rules-cards">
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R001</code>
+            <span class="rule-priority">P: 100</span>
+            <span class="rule-badge rule-badge-scope">Ruang Lingkup</span>
+          </div>
+          <p>Jika usia di luar target utama (18–25 tahun), maka diberikan peringatan.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R002</code>
+            <span class="rule-priority">P: 100</span>
+            <span class="rule-badge rule-badge-scope">Ruang Lingkup</span>
+          </div>
+          <p>Jika pengguna memiliki kondisi medis khusus, maka rekomendasi umum ditolak.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R003</code>
+            <span class="rule-priority">P: 99</span>
+            <span class="rule-badge rule-badge-feasibility">Kelayakan</span>
+          </div>
+          <p>Jika tidak ada alat masak yang dipilih, maka seluruh resep ditolak.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R010</code>
+            <span class="rule-priority">P: 95</span>
+            <span class="rule-badge rule-badge-safety">Keamanan</span>
+          </div>
+          <p>Jika alergen pengguna cocok dengan alergen resep, maka resep ditolak.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R020</code>
+            <span class="rule-priority">P: 90</span>
+            <span class="rule-badge rule-badge-preference">Preferensi</span>
+          </div>
+          <p>Jika resep nonvegetarian dan pengguna vegetarian, maka resep ditolak.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R021</code>
+            <span class="rule-priority">P: 88</span>
+            <span class="rule-badge rule-badge-preference">Preferensi</span>
+          </div>
+          <p>Jika resep mengandung bahan yang tidak disukai, maka resep ditolak.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R030</code>
+            <span class="rule-priority">P: 85</span>
+            <span class="rule-badge rule-badge-feasibility">Kelayakan</span>
+          </div>
+          <p>Jika peralatan memasak yang dibutuhkan tidak tersedia, maka resep ditolak.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R040</code>
+            <span class="rule-priority">P: 80</span>
+            <span class="rule-badge rule-badge-feasibility">Kelayakan</span>
+          </div>
+          <p>Jika waktu memasak melebihi batas yang dipilih pengguna, maka resep ditolak.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R050</code>
+            <span class="rule-priority">P: 75</span>
+            <span class="rule-badge rule-badge-budget">Anggaran</span>
+          </div>
+          <p>Jika biaya resep melebihi alokasi anggaran waktu makan, maka resep ditolak.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-card-head">
+            <code class="rule-code">R080</code>
+            <span class="rule-priority">P: 10</span>
+            <span class="rule-badge rule-badge-pass">Lolos</span>
+          </div>
+          <p>Jika resep tidak melanggar satupun batas wajib, maka resep dinyatakan eligible.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules-group">
+      <div class="rules-group-header">
+        <span class="rules-group-icon rules-icon-fuzzy">≈</span>
+        <div>
+          <h3>Fuzzy Rules — Pemeringkatan</h3>
+          <p>Menghitung derajat kecocokan menu yang lolos berdasarkan anggaran, waktu, dan bahan.</p>
+        </div>
+      </div>
+      <div class="rules-cards">
+        <div class="rule-card rule-card-fuzzy">
+          <div class="rule-card-head">
+            <code class="rule-code rule-code-fuzzy">F01</code>
+            <span class="rule-badge rule-badge-fuzzy">Output: 95</span>
+          </div>
+          <p>Jika anggaran <strong>tinggi</strong>, waktu <strong>tinggi</strong>, dan cakupan bahan <strong>tinggi</strong> → kecocokan sangat tinggi.</p>
+        </div>
+        <div class="rule-card rule-card-fuzzy">
+          <div class="rule-card-head">
+            <code class="rule-code rule-code-fuzzy">F02</code>
+            <span class="rule-badge rule-badge-fuzzy">Output: 84</span>
+          </div>
+          <p>Jika anggaran <strong>tinggi</strong> dan cakupan bahan <strong>sedang</strong> → kecocokan tinggi.</p>
+        </div>
+        <div class="rule-card rule-card-fuzzy">
+          <div class="rule-card-head">
+            <code class="rule-code rule-code-fuzzy">F03</code>
+            <span class="rule-badge rule-badge-fuzzy">Output: 79</span>
+          </div>
+          <p>Jika anggaran <strong>sedang</strong> dan waktu <strong>tinggi</strong> → kecocokan cukup tinggi.</p>
+        </div>
+        <div class="rule-card rule-card-fuzzy">
+          <div class="rule-card-head">
+            <code class="rule-code rule-code-fuzzy">F04</code>
+            <span class="rule-badge rule-badge-fuzzy">Output: 72</span>
+          </div>
+          <p>Jika anggaran <strong>sedang</strong> dan cakupan bahan <strong>sedang</strong> → kecocokan moderat.</p>
+        </div>
+        <div class="rule-card rule-card-fuzzy">
+          <div class="rule-card-head">
+            <code class="rule-code rule-code-fuzzy">F05</code>
+            <span class="rule-badge rule-badge-fuzzy">Output: 42</span>
+          </div>
+          <p>Jika anggaran <strong>rendah</strong> atau waktu <strong>rendah</strong> → kecocokan rendah.</p>
+        </div>
+        <div class="rule-card rule-card-fuzzy">
+          <div class="rule-card-head">
+            <code class="rule-code rule-code-fuzzy">F06</code>
+            <span class="rule-badge rule-badge-fuzzy">Output: 55</span>
+          </div>
+          <p>Jika cakupan bahan <strong>rendah</strong> → kecocokan di bawah rata-rata.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="method-formula">
+    <div class="content-card" style="text-align:center">
+      <span class="eyebrow"><i></i>FORMULA SKOR AKHIR</span>
+      <h3 style="margin:12px 0 8px;font-size:1.1rem">Skor = 0.58 × Fuzzy + 0.27 × Nutrisi + 0.15 × Tujuan</h3>
+      <p style="margin:0;font-size:.8rem">Defuzzifikasi menggunakan metode Fuzzy Sugeno orde nol (weighted average berbasis singleton output). Skor akhir dinormalisasi ke rentang 0–100.</p>
+    </div>
+  </div>
+</div></section>
+{% endblock %}
+

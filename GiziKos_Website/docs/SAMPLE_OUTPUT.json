@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "message": "Rencana menu berhasil disusun berdasarkan aturan wajib dan skor kecocokan.",
+  "profile_example": {
+    "goal": "Menurunkan berat badan secara bertahap",
+    "bmi": 22.0,
+    "energy_target": 2073
+  },
+  "plan_example": [
+    "Nasi Telur Rebus & Tumis Bayam",
+    "Nasi Tempe Brokoli",
+    "Nasi Tempe Tauge Rice Cooker"
+  ],
+  "totals_example": {
+    "energy": 1589.5,
+    "protein": 73.23,
+    "fiber": 10.91,
+    "cost": 23099,
+    "daily_budget": 40000,
+    "average_score": 75.1
+  }
+}

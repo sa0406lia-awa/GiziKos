@@ -1,0 +1,697 @@
+{% extends "base.html" %}
+{% block title %}Hasil Rekomendasi — GiziKos{% endblock %}
+{% block head %}
+<style>
+/* Modern Glassmorphism & High-Contrast Result Page Enhancements (On-Screen) */
+.result-hero {
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(99, 102, 241, 0.32) 0%, transparent 55%),
+    radial-gradient(circle at 12% 88%, rgba(139, 92, 246, 0.25) 0%, transparent 45%),
+    linear-gradient(135deg, #0F172A 0%, #1E293B 45%, #312E81 100%) !important;
+}
+.result-score-card {
+  background: rgba(255, 255, 255, 0.09) !important;
+  backdrop-filter: blur(24px) saturate(1.8) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+}
+.result-score-card small { color: rgba(255, 255, 255, 0.75) !important; font-weight: 700; letter-spacing: 0.12em; }
+.result-score-card strong { color: #818CF8 !important; text-shadow: 0 4px 20px rgba(99, 102, 241, 0.5); font-weight: 900; }
+.result-score-card span { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; }
+.result-score-card p { color: rgba(255, 255, 255, 0.9) !important; font-weight: 600 !important; }
+
+.metric-card {
+  border-radius: 16px !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+.metric-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 35px -10px rgba(99, 102, 241, 0.22) !important;
+  border-color: var(--primary-3) !important;
+}
+.menu-card {
+  border-radius: 20px !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+.menu-card:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 18px 45px -10px rgba(15, 23, 42, 0.14) !important;
+}
+
+/* Print Overrides - Ultra-Clean, Tight Executive A4 PDF Report (Fits 2 Pages Cleanly) */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+  .site-header, .site-footer, .result-actions, .flash-wrap, details.alternatives, summary, details, .disclaimer-banner, .skip-link, #toast, .nav-toggle {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #0F172A !important;
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Hero Section Print Reset */
+  .result-hero {
+    background: #ffffff !important;
+    color: #0F172A !important;
+    padding: 0 0 10px 0 !important;
+    border-bottom: 2px solid #0F172A !important;
+    margin-bottom: 10px !important;
+    border-radius: 0 !important;
+  }
+  .result-hero::before, .result-hero::after {
+    display: none !important;
+  }
+  .result-hero-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  .result-hero h1 {
+    color: #0F172A !important;
+    font-size: 16pt !important;
+    font-weight: 800 !important;
+    margin: 0 0 3pt 0 !important;
+    line-height: 1.2 !important;
+    text-shadow: none !important;
+  }
+  .result-hero p {
+    color: #475569 !important;
+    font-size: 9pt !important;
+    margin: 0 !important;
+  }
+  .result-hero .eyebrow {
+    color: #4F46E5 !important;
+    font-weight: 800 !important;
+    font-size: 7.5pt !important;
+    letter-spacing: 0.1em !important;
+  }
+  .result-hero .eyebrow i {
+    background: #4F46E5 !important;
+  }
+  
+  .result-score-card {
+    border: 1.5px solid #6366F1 !important;
+    background: #F8FAFC !important;
+    box-shadow: none !important;
+    padding: 6px 12px !important;
+    text-align: center !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+    min-width: 140px !important;
+  }
+  .result-score-card small {
+    font-size: 7pt !important;
+    color: #475569 !important;
+    font-weight: 700 !important;
+  }
+  .result-score-card strong {
+    font-size: 20pt !important;
+    color: #4F46E5 !important;
+    line-height: 1 !important;
+    text-shadow: none !important;
+    font-weight: 900 !important;
+  }
+  .result-score-card span {
+    font-size: 7.5pt !important;
+    color: #64748B !important;
+  }
+  .result-score-card p {
+    font-size: 7pt !important;
+    color: #1E293B !important;
+    margin-top: 1px !important;
+    font-weight: 700 !important;
+  }
+  
+  .result-section {
+    padding: 0 !important;
+  }
+  .warning-stack {
+    margin-bottom: 8px !important;
+    display: grid !important;
+    gap: 4px !important;
+  }
+  .alert-warning {
+    background: #FFFBEB !important;
+    border: 1px solid #FCD34D !important;
+    color: #92400E !important;
+    padding: 4px 8px !important;
+    font-size: 8pt !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+  }
+  
+  .metric-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 6px !important;
+    margin-bottom: 10px !important;
+  }
+  .metric-card {
+    border: 1px solid #CBD5E1 !important;
+    background: #F8FAFC !important;
+    box-shadow: none !important;
+    padding: 6px 8px !important;
+    border-radius: 6px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  .metric-card small {
+    font-size: 6.5pt !important;
+    color: #64748B !important;
+    font-weight: 700 !important;
+  }
+  .metric-card strong {
+    font-size: 10.5pt !important;
+    color: #0F172A !important;
+    font-weight: 800 !important;
+  }
+  .metric-card p {
+    font-size: 7pt !important;
+    color: #475569 !important;
+    margin-top: 1px !important;
+  }
+  .metric-icon {
+    display: none !important;
+  }
+  
+  .result-layout {
+    display: block !important;
+    margin-top: 8px !important;
+  }
+  .result-main {
+    width: 100% !important;
+  }
+  .section-heading.inline {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 8px !important;
+  }
+  .section-heading h2 {
+    font-size: 11.5pt !important;
+    color: #0F172A !important;
+    margin: 0 !important;
+    font-weight: 800 !important;
+  }
+  .result-status {
+    background: #EEF2FF !important;
+    color: #4F46E5 !important;
+    border: 1px solid #C7D2FE !important;
+    padding: 2px 6px !important;
+    font-size: 7pt !important;
+    border-radius: 99px !important;
+    font-weight: 800 !important;
+  }
+  
+  .menu-list {
+    display: grid !important;
+    gap: 8px !important;
+  }
+  .menu-card {
+    border: 1.5px solid #64748B !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  .menu-card-head {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  .meal-title small {
+    font-size: 7pt !important;
+    color: #4F46E5 !important;
+    font-weight: 800 !important;
+  }
+  .meal-title h3 {
+    font-size: 11pt !important;
+    color: #0F172A !important;
+    margin: 1pt 0 !important;
+    font-weight: 800 !important;
+  }
+  .meal-title p {
+    font-size: 7.5pt !important;
+    color: #64748B !important;
+  }
+  .menu-icon {
+    display: none !important;
+  }
+  .score-pill {
+    background: #EEF2FF !important;
+    color: #4F46E5 !important;
+    border: 1px solid #C7D2FE !important;
+    padding: 2px 6px !important;
+    border-radius: 6px !important;
+    flex-shrink: 0 !important;
+    text-align: center !important;
+  }
+  .score-pill strong {
+    font-size: 10pt !important;
+    font-weight: 800 !important;
+  }
+  .score-pill span {
+    font-size: 6pt !important;
+  }
+  
+  .nutrition-mini-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 4px !important;
+    margin: 6px 0 !important;
+  }
+  .nutrition-mini-grid span {
+    background: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
+    padding: 3px !important;
+    text-align: center !important;
+    border-radius: 4px !important;
+  }
+  .nutrition-mini-grid strong {
+    font-size: 8pt !important;
+    color: #0F172A !important;
+    font-weight: 800 !important;
+  }
+  .nutrition-mini-grid small {
+    font-size: 6pt !important;
+    color: #64748B !important;
+  }
+  
+  .menu-columns {
+    display: grid !important;
+    grid-template-columns: 1fr 1.1fr !important;
+    gap: 10px !important;
+    padding-top: 6px !important;
+    border-top: 1px solid #E2E8F0 !important;
+  }
+  .menu-columns h4, .reason-box h4 {
+    font-size: 8pt !important;
+    margin-bottom: 3px !important;
+    color: #0F172A !important;
+    font-weight: 800 !important;
+  }
+  .ingredient-list li {
+    font-size: 7.5pt !important;
+    padding: 1.5px 0 !important;
+    border-bottom: 1px dashed #E2E8F0 !important;
+  }
+  .ingredient-list .is-available span::before {
+    content: "✓ " !important;
+    color: #10B981 !important;
+    font-weight: 800 !important;
+  }
+  .steps-list li {
+    font-size: 7.5pt !important;
+    margin: 1.5px 0 !important;
+    color: #334155 !important;
+  }
+  .reason-box {
+    margin-top: 6px !important;
+    padding: 5px 8px !important;
+    background: #F1F5F9 !important;
+    border-radius: 6px !important;
+    border: 1px solid #E2E8F0 !important;
+  }
+  .reason-box li {
+    font-size: 7pt !important;
+    color: #1E293B !important;
+    margin: 1px 0 !important;
+  }
+  
+  .result-aside {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  .side-card {
+    border: 1px solid #CBD5E1 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    padding: 8px 10px !important;
+    border-radius: 6px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  .side-card-title > span {
+    display: none !important;
+  }
+  .side-card-title h3 {
+    font-size: 8.5pt !important;
+    color: #0F172A !important;
+    margin: 0 !important;
+    font-weight: 800 !important;
+  }
+  .profile-card dl > div {
+    padding: 2.5px 0 !important;
+    font-size: 7.5pt !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+  }
+  .shopping-list li {
+    padding: 2.5px 0 !important;
+    font-size: 7.5pt !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+  }
+  .shopping-list input {
+    display: none !important;
+  }
+  .budget-bar {
+    background: #E2E8F0 !important;
+    height: 6px !important;
+  }
+  .budget-bar span {
+    background: #4F46E5 !important;
+  }
+  .budget-values {
+    font-size: 7pt !important;
+    color: #475569 !important;
+    margin-top: 4px !important;
+  }
+  
+  .result-aside .side-card:not(.profile-card):not(:has(.shopping-list)) {
+    display: none !important;
+  }
+  
+  h1, h2, h3, h4 {
+    page-break-after: avoid !important;
+  }
+}
+</style>
+{% endblock %}
+
+
+{% block content %}
+<section class="result-hero">
+  <div class="container result-hero-grid">
+    <div>
+      <span class="eyebrow"><i></i> HASIL SISTEM PAKAR</span>
+      <h1>Rencana menu untuk {{ result.profile.name }} sudah siap.</h1>
+      <p>{{ result.message }}</p>
+      <div class="result-actions">
+        <a class="btn btn-primary" href="/cek-gizi">Buat Ulang</a>
+        <button class="btn btn-secondary" type="button" onclick="window.print()">Cetak Hasil</button>
+      </div>
+    </div>
+    <div class="result-score-card" title="Skor digunakan untuk membandingkan kandidat menu berdasarkan aturan sistem dan bukan merupakan probabilitas medis atau ukuran akurasi klinis.">
+      <small>SKOR KECOCOKAN RELATIF ⓘ</small>
+      <strong>{{ result.totals.average_score|round|int }}</strong>
+      <span>/ 100</span>
+      <p>
+        {% if result.status == 'complete' %}
+          Rekomendasi lengkap
+        {% elif result.status == 'partial' %}
+          Rekomendasi sebagian
+        {% else %}
+          Tidak ada menu cocok
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="result-section">
+  <div class="container">
+    {% if result.warnings %}
+      <div class="warning-stack">
+        {% for warning in result.warnings %}
+          <div class="alert alert-warning"><span>!</span>{{ warning }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="metric-grid result-metrics">
+      <article class="metric-card">
+        <span class="metric-icon">Rp</span>
+        <div>
+          <small>ESTIMASI BIAYA</small>
+          <strong>Rp{{ result.totals.cost|format_currency }}</strong>
+          <p>dari Rp{{ result.totals.daily_budget|format_currency }}</p>
+        </div>
+      </article>
+      <article class="metric-card">
+        <span class="metric-icon">⚡</span>
+        <div>
+          <small>ENERGI MENU</small>
+          <strong>{{ result.totals.energy|round|int }} kkal</strong>
+          <p>Pemenuhan energi: {{ result.totals.energy_ratio_percent }}%</p>
+        </div>
+      </article>
+      <article class="metric-card">
+        <span class="metric-icon">P</span>
+        <div>
+          <small>PROTEIN</small>
+          <strong>{{ result.totals.protein|round(1) }} g</strong>
+          <p>Pemenuhan protein: {{ result.totals.protein_ratio_percent }}%</p>
+        </div>
+      </article>
+      <article class="metric-card" title="Skor digunakan untuk membandingkan kandidat menu berdasarkan aturan sistem dan bukan merupakan probabilitas medis atau ukuran akurasi klinis.">
+        <span class="metric-icon">✦</span>
+        <div>
+          <small>KECOCOKAN RELATIF ⓘ</small>
+          <strong>{{ result.totals.average_score|round|int }}/100</strong>
+          <p>skor kombinasi fuzzy</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="result-layout">
+      <div class="result-main">
+        <div class="section-heading inline">
+          <div>
+            <span class="eyebrow"><i></i> RENCANA MENU HARIAN</span>
+            <h2>Menu harian terpilih</h2>
+          </div>
+          <span class="result-status status-{{ result.status }}">
+            {% if result.status == 'complete' %}
+              LENGKAP
+            {% elif result.status == 'partial' %}
+              SEBAGIAN
+            {% else %}
+              TIDAK ADA COCOK
+            {% endif %}
+          </span>
+        </div>
+        {% if result.plan %}
+          <div class="menu-list">
+            {% for menu in result.plan %}
+              <article class="menu-card">
+                <div class="menu-card-head">
+                  <div class="meal-title">
+                    <span class="menu-icon {{ menu.meal_type }}">
+                      {% if menu.meal_type == 'breakfast' %}☀{% elif menu.meal_type == 'lunch' %}◐{% else %}☾{% endif %}
+                    </span>
+                    <div>
+                      <small>{{ menu.meal_label|upper }} (Porsi {{ menu.portion_multiplier }}x)</small>
+                      <h3>{{ menu.name }}</h3>
+                      <p>{{ menu.cooking_time }} menit • {{ menu.tools|join(', ') }}</p>
+                    </div>
+                  </div>
+                  <div class="score-pill">
+                    <strong>{{ menu.score|round|int }}</strong>
+                    <span>skor</span>
+                  </div>
+                </div>
+                <div class="nutrition-mini-grid">
+                  <span><strong>{{ menu.nutrition.energy|round|int }}</strong><small>kkal</small></span>
+                  <span><strong>{{ menu.nutrition.protein|round(1) }}</strong><small>g protein</small></span>
+                  <span><strong>Rp{{ menu.nutrition.cost|format_currency }}</strong><small>estimasi biaya</small></span>
+                  <span><strong>{{ menu.fuzzy.coverage|round|int }}%</strong><small>bahan tersedia</small></span>
+                  <span><strong>{{ menu.fuzzy.goal_score|round|int }}</strong><small>sesuai tujuan</small></span>
+                </div>
+                <div class="menu-columns">
+                  <div>
+                    <h4>Bahan</h4>
+                    <ul class="ingredient-list">
+                      {% for ingredient in menu.ingredients %}
+                        <li class="{% if ingredient.available %}is-available{% endif %}">
+                          <span>{{ ingredient.name }}</span>
+                          <em>{{ ingredient.grams }} g {% if ingredient.available %}• tersedia{% endif %}</em>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Cara membuat</h4>
+                    <ol class="steps-list">
+                      {% for step in menu.steps %}
+                        <li>{{ step }}</li>
+                      {% endfor %}
+                    </ol>
+                  </div>
+                </div>
+                <div class="reason-box">
+                  <h4>Kenapa menu ini dipilih?</h4>
+                  <ul>
+                    {% for reason in menu.reasons %}
+                      <li>{{ reason }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                {% if result.alternatives.get(menu.meal_type) %}
+                  <details class="alternatives">
+                    <summary>Lihat alternatif {{ menu.meal_label|lower }}</summary>
+                    <div class="alternative-grid">
+                      {% for alt in result.alternatives[menu.meal_type] %}
+                        <div>
+                          <strong>{{ alt.name }}</strong>
+                          <span>Skor {{ alt.score|round|int }} • Rp{{ alt.nutrition.cost|format_currency }}</span>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </details>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="empty-state">
+            <span>×</span>
+            <h3>Tidak ada menu yang dapat direkomendasikan</h3>
+            <p>Periksa kembali alat masak, anggaran, waktu, alergi, dan bahan yang dihindari.</p>
+            <a class="btn btn-primary" href="/cek-gizi">Perbaiki Input</a>
+          </div>
+        {% endif %}
+      </div>
+
+      <aside class="result-aside">
+        <section class="side-card profile-card">
+          <div class="side-card-title">
+            <span>◎</span>
+            <h3>Ringkasan profil</h3>
+          </div>
+          <dl>
+            <div><dt>Usia</dt><dd>{{ result.profile.age }} tahun</dd></div>
+            <div><dt>Berat / tinggi</dt><dd>{{ result.profile.weight }} kg / {{ result.profile.height }} cm</dd></div>
+            <div><dt>Aktivitas</dt><dd>{{ result.profile.activity }}</dd></div>
+            <div><dt>Tujuan</dt><dd>{{ result.profile.goal }}</dd></div>
+            <div><dt>BMI informatif</dt><dd>{{ result.profile.bmi }} — {{ result.profile.bmi_label }}</dd></div>
+            <div><dt>Target energi</dt><dd>{{ result.profile.energy_target.target }} kkal</dd></div>
+          </dl>
+          <small>Estimasi energi menggunakan rumus umum dan bukan resep medis.</small>
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">
+            <span>Rp</span>
+            <h3>Penggunaan anggaran</h3>
+          </div>
+          <div class="budget-bar">
+            <span style="width: {{ [result.totals.budget_usage_percent, 100]|min ~ '%' }};"></span>
+          </div>
+
+          <div class="budget-values">
+            <span>Terpakai {{ result.totals.budget_usage_percent }}%</span>
+            <strong>Sisa Rp{{ result.totals.remaining_budget|format_currency }}</strong>
+          </div>
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">
+            <span>＋</span>
+            <h3>Daftar belanja</h3>
+          </div>
+          {% if result.shopping_list %}
+            <ul class="shopping-list">
+              {% for item in result.shopping_list %}
+                <li>
+                  <label><input type="checkbox"><span>{{ item.name }}</span></label>
+                  <em>{{ item.grams }} g</em>
+                </li>
+              {% endfor %}
+            </ul>
+            <small style="display:block;margin-top:10px;color:var(--muted);font-size:0.7rem;line-height:1.45;">
+              * Daftar belanja ini disusun dengan asumsi bahwa bahan yang Anda pilih sebagai 'tersedia' sudah dimiliki dalam jumlah yang cukup untuk porsi makanan Anda.
+            </small>
+          {% else %}
+            <p class="success-text">✓ Semua bahan utama sudah tersedia.</p>
+          {% endif %}
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">
+            <span>AI</span>
+            <h3>Keputusan inferensi</h3>
+          </div>
+          <details open class="rule-details-accordion" style="margin-bottom:12px">
+            <summary style="font-weight:600;font-size:0.8rem;color:var(--ink);cursor:pointer;margin-bottom:8px">Aturan aktif pendukung menu</summary>
+            <div class="rule-list" style="max-height: 220px; overflow-y: auto;">
+              {% for rule in result.selected_rules %}
+                <div style="border-bottom:1px solid var(--line);padding:8px 0;font-size:0.75rem">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+                    <code style="background:var(--primary-soft);color:var(--primary);font-weight:700;padding:2px 6px;border-radius:4px">{{ rule.code }}</code>
+                    <span style="font-size:0.7rem;color:var(--primary);font-weight:600">{{ rule.conclusion }}</span>
+                  </div>
+                  <strong style="display:block;margin-bottom:2px;color:var(--ink)">{{ rule.description }}</strong>
+                  <p style="margin:0 0-4px;color:var(--muted)">Fakta: {{ rule.trigger_fact }}</p>
+                  <p style="margin:4px 0 0;color:var(--primary);font-style:italic">Menu terkait: {{ rule.menu_related }}</p>
+                </div>
+              {% endfor %}
+            </div>
+          </details>
+          <details class="rule-details-accordion">
+            <summary style="font-weight:600;font-size:0.8rem;color:var(--ink);cursor:pointer;margin-bottom:8px">Ringkasan kandidat ditolak</summary>
+            <div class="rule-list" style="max-height: 220px; overflow-y: auto;">
+              {% for key, val in result.rejection_summary.items() %}
+                {% if val > 0 %}
+                  <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:6px 0;font-size:0.75rem">
+                    <div style="max-width:80%">
+                      <code style="background:var(--surface-soft);color:var(--muted);font-weight:700;padding:2px 6px;border-radius:4px">{{ key|upper }}</code>
+                      <span style="margin-left:4px;color:var(--ink)">
+                        {% if key == 'scope' %}
+                          Batas usia mahasiswa (18-25 tahun)
+                        {% elif key == 'medical' %}
+                          Kondisi medis khusus
+                        {% elif key == 'tools' %}
+                          Keterbatasan alat masak
+                        {% elif key == 'allergy' %}
+                          Mengandung bahan alergen
+                        {% elif key == 'vegetarian' %}
+                          Menu non-vegetarian
+                        {% elif key == 'disliked' %}
+                          Mengandung bahan tidak disukai
+                        {% elif key == 'time' %}
+                          Waktu masak melebihi batas
+                        {% elif key == 'budget' %}
+                          Biaya melebihi anggaran
+                        {% else %}
+                          Kriteria wajib dilanggar
+                        {% endif %}
+                      </span>
+                    </div>
+                    <span style="color:var(--muted);font-weight:700">{{ val }} resep</span>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </details>
+        </section>
+      </aside>
+    </div>
+    <div class="disclaimer-banner">ℹ {{ result.disclaimer }}</div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Admin Login — GiziKos{% endblock %}
+{% block content %}
+<section class="section-pad admin-login-section">
+  <div class="container">
+    <div class="login-card">
+      <div style="text-align:center;margin-bottom:24px">
+        <div class="brand-mark large" style="margin:0 auto 16px">G</div>
+        <h1 style="font-size:1.8rem;margin:0 0 8px">Admin GiziKos</h1>
+        <p style="margin:0">Masuk untuk mengelola parameter, harga, dan status resep.</p>
+      </div>
+      {% if error %}<div class="alert alert-danger">{{ error }}</div>{% endif %}
+      <form action="/admin/login" method="post" style="display:grid;gap:14px;margin-top:20px">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <label class="field">
+          <span>Kata sandi</span>
+          <input type="password" name="password" required autofocus placeholder="Masukkan kata sandi admin">
+        </label>
+        <button class="btn btn-primary full-btn btn-lg" type="submit">Masuk ke dashboard</button>
+      </form>
+      <small style="display:block;text-align:center;margin-top:16px;color:var(--muted)">Default demo: <code style="background:var(--surface-soft);padding:2px 6px;border-radius:5px;font-size:.8rem">gizikos-admin</code>. Ubah melalui environment variable.</small>
+    </div>
+  </div>
+</section>
+{% endblock %}

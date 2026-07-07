@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GiziKos — sistem pakar rekomendasi menu seimbang, hemat, dan realistis untuk mahasiswa kos.">
+  <meta name="theme-color" content="#6366F1">
+  <title>{% block title %}{{ app_name }}{% endblock %}</title>
+  <link rel="icon" href="{{ url_for('static', path='img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/app.css') }}?v={{ version }}-rev3">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="GiziKos beranda">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img"><path d="M24 5C14 5 7 12.6 7 22.3c0 7.3 4.3 13.6 10.5 16.4V27.5c-2.8-1.8-4.4-4.8-4.4-8.2 0-1.2.2-2.4.6-3.4l3.7 4.2 3.4-7.5 3.6 7.4 3.7-7.4 3.4 7.5 3.7-4.2c.4 1.1.6 2.2.6 3.4 0 3.4-1.7 6.5-4.5 8.2v11.2C37.7 35.9 42 29.6 42 22.3 42 12.6 34 5 24 5Z" fill="currentColor"/><path d="M22 27h4v16h-4z" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-copy"><strong>GiziKos</strong><small>Menu cerdas anak kos</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Buka navigasi" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        {% if request.url.path.startswith('/admin') %}
+          <a class="nav-back-site" href="/">← Kembali ke Website</a>
+          {% if request.session.get("admin") %}
+            <span class="admin-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Mode Admin
+            </span>
+          {% endif %}
+        {% else %}
+          <a class="{% if request.url.path == '/' %}active{% endif %}" href="/">Beranda</a>
+          <a class="{% if request.url.path.startswith('/cek-gizi') or request.url.path.startswith('/hasil') %}active{% endif %}" href="/cek-gizi">Cek Gizi</a>
+          <a class="{% if request.url.path == '/metode' %}active{% endif %}" href="/metode">Cara Kerja</a>
+          <a class="{% if request.url.path == '/referensi' %}active{% endif %}" href="/referensi">Referensi</a>
+          {% if current_user %}
+            <a class="{% if request.url.path == '/riwayat' %}active{% endif %}" href="/riwayat">Riwayat</a>
+            <div class="user-dropdown" id="userDropdown">
+              <button class="user-pill" type="button" aria-expanded="false" aria-haspopup="true" id="userDropdownBtn">
+                <span class="user-avatar">{{ current_user.name[0]|upper }}</span>
+                <b class="user-name">{{ current_user.name }}</b>
+                <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="user-dropdown-menu" id="userDropdownMenu">
+                <div class="dropdown-user-info">
+                  <span class="dropdown-avatar">{{ current_user.name[0]|upper }}</span>
+                  <div>
+                    <strong>{{ current_user.name }}</strong>
+                    <small>{{ current_user.email }}</small>
+                  </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/akun">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 8a3 3 0 100-6 3 3 0 000 6zM2.5 14a5.5 5.5 0 0111 0" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+                  Profil Saya
+                </a>
+                <a class="dropdown-item" href="/riwayat">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 4v4l2.5 1.5M14 8A6 6 0 112 8a6 6 0 0112 0z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Riwayat
+                </a>
+                <div class="dropdown-divider"></div>
+                <form method="post" action="/logout" class="dropdown-form">
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                  <button class="dropdown-item dropdown-logout" type="submit">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 14H3.5A1.5 1.5 0 012 12.5v-9A1.5 1.5 0 013.5 2H6M10.5 11.5L14 8l-3.5-3.5M14 8H6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Keluar
+                  </button>
+                </form>
+              </div>
+            </div>
+          {% else %}
+            <a class="nav-login" href="/login">Masuk</a>
+            <a class="nav-cta" href="/daftar">Daftar Gratis</a>
+          {% endif %}
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+
+  {% if flash %}<div class="flash-wrap"><div class="flash flash-{{ flash.kind }}">{{ flash.message }}</div></div>{% endif %}
+  <main id="main-content">{% block content %}{% endblock %}</main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <a class="brand brand-footer" href="/"><span class="brand-mark"><svg viewBox="0 0 48 48"><path d="M24 5C14 5 7 12.6 7 22.3c0 7.3 4.3 13.6 10.5 16.4V27.5c-2.8-1.8-4.4-4.8-4.4-8.2 0-1.2.2-2.4.6-3.4l3.7 4.2 3.4-7.5 3.6 7.4 3.7-7.4 3.4 7.5 3.7-4.2c.4 1.1.6 2.2.6 3.4 0 3.4-1.7 6.5-4.5 8.2v11.2C37.7 35.9 42 29.6 42 22.3 42 12.6 34 5 24 5Z" fill="currentColor"/><path d="M22 27h4v16h-4z" fill="currentColor"/></svg></span><span class="brand-copy"><strong>GiziKos</strong><small>Seimbang • Hemat • Praktis</small></span></a>
+        <p>Sistem pakar untuk membantu mahasiswa kos memilih menu yang realistis berdasarkan tujuan, budget, alergi, alat masak, waktu, dan stok bahan.</p>
+      </div>
+      <div><h3>Produk</h3><a href="/cek-gizi">Cek Gizi</a><a href="/metode">Cara Kerja</a><a href="/referensi">Dataset & Referensi</a></div>
+      <div><h3>Akun</h3>{% if current_user %}<a href="/akun">Profil Saya</a><a href="/riwayat">Riwayat</a>{% else %}<a href="/login">Masuk</a><a href="/daftar">Daftar</a>{% endif %}<a href="/admin">Admin</a></div>
+      <div><h3>Informasi</h3><a href="/tentang">Tentang & Disclaimer</a><span>Versi {{ version }}</span><span>Project UAS AI</span></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 GiziKos.</span><span>Bukan pengganti dokter atau ahli gizi.</span></div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="{{ url_for('static', path='js/app.js') }}?v={{ version }}b" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

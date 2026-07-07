@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}GiziKos — Menu Seimbang dan Hemat untuk Anak Kos{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow"><i></i>SISTEM PAKAR MENU ANAK KOS</span>
+      <h1>Makan lebih terarah, <span>tanpa bikin dompet kewalahan.</span></h1>
+      <p class="lead">GiziKos menyusun menu berdasarkan tujuanmu, anggaran harian, aktivitas, alergi, alat masak, waktu memasak, dan bahan yang sudah tersedia.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-lg" href="/cek-gizi">Mulai Cek Gizi <b>→</b></a><a class="btn btn-ghost btn-lg" href="/metode">Pelajari Cara Kerja</a></div>
+      <div class="hero-trust"><span><b>✓</b> Aman dari bahan alergi</span><span><b>✓</b> Sesuai alat masak</span><span><b>✓</b> Alasan rekomendasi transparan</span></div>
+    </div>
+    <div class="hero-dashboard reveal delay-1" aria-label="Pratinjau dashboard hasil">
+      <div class="dashboard-window">
+        <div class="window-bar"><div><span></span><span></span><span></span></div><em>Ringkasan menu hari ini</em></div>
+        <div class="dashboard-head"><div><small>STATUS REKOMENDASI</small><h3>Seimbang & sesuai budget</h3></div><div class="score-circle"><span>92</span><small>/100</small></div></div>
+        <div class="dashboard-metrics"><div><span>Estimasi biaya</span><strong>Rp28.500</strong><small>dari budget Rp30.000</small></div><div><span>Estimasi energi</span><strong>2.050 kkal</strong><small>3 waktu makan</small></div></div>
+        <div class="mini-menu"><span class="menu-icon breakfast">☀</span><div><small>Sarapan</small><strong>Oat pisang susu</strong></div><em>8 menit</em></div>
+        <div class="mini-menu"><span class="menu-icon lunch">◐</span><div><small>Makan siang</small><strong>Nasi tempe kangkung</strong></div><em>20 menit</em></div>
+        <div class="mini-menu"><span class="menu-icon dinner">☾</span><div><small>Makan malam</small><strong>Sup tahu kentang</strong></div><em>25 menit</em></div>
+        <div class="dashboard-note"><span>AI</span><p><strong>Alasan utama</strong> Harga sesuai, alat tersedia, aman dari alergi, dan sejalan dengan tujuan.</p></div>
+      </div>
+      <div class="float-badge badge-one"><strong>{{ stats.foods }}+</strong><span>bahan praktis</span></div>
+      <div class="float-badge badge-two"><strong>{{ stats.recipes }}+</strong><span>resep anak kos</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="stat-band"><div class="container stat-grid"><div><strong>{{ stats.foods }}+</strong><span>Bahan makanan</span></div><div><strong>{{ stats.recipes }}+</strong><span>Resep praktis</span></div><div><strong>2</strong><span>Metode AI</span></div><div><strong>{{ stats.consultations }}+</strong><span>Rekomendasi dibuat</span></div></div></section>
+
+<section class="section-pad"><div class="container">
+  <div class="section-heading center reveal"><span class="eyebrow"><i></i>DIRANCANG UNTUK KEHIDUPAN KOS</span><h2>Bukan kalkulator kalori biasa.</h2><p>Sistem memeriksa kondisi nyata sebelum memberi rekomendasi, sehingga menu yang muncul lebih mungkin benar-benar bisa dibuat dan dibeli.</p></div>
+  <div class="feature-grid">
+    <article class="feature-card reveal"><span class="feature-number">01</span><div class="feature-icon">◎</div><h3>Tujuan yang relevan</h3><p>Menjaga, menurunkan, atau menambah berat badan secara bertahap, mendukung massa otot, pola seimbang, atau fokus hemat.</p></article>
+    <article class="feature-card reveal delay-1"><span class="feature-number">02</span><div class="feature-icon">Rp</div><h3>Budget yang mudah diatur</h3><p>Pilih nominal melalui slider dan preset. Sistem membagi anggaran ke tiap waktu makan secara otomatis.</p></article>
+    <article class="feature-card reveal delay-2"><span class="feature-number">03</span><div class="feature-icon">⌁</div><h3>Alat masak realistis</h3><p>Resep hanya muncul apabila alat yang dibutuhkan tersedia. Tanpa alat masak, sistem tidak memaksakan rekomendasi.</p></article>
+    <article class="feature-card reveal"><span class="feature-number">04</span><div class="feature-icon">✓</div><h3>Filter alergi berlapis</h3><p>Bahan alergi dan tidak disukai langsung hilang dari stok, kemudian diperiksa kembali oleh backend.</p></article>
+    <article class="feature-card reveal delay-1"><span class="feature-number">05</span><div class="feature-icon">◷</div><h3>Sesuai waktu luang</h3><p>Pilih batas waktu memasak agar resep tetap cocok dengan jadwal kuliah dan aktivitas harian.</p></article>
+    <article class="feature-card reveal delay-2"><span class="feature-number">06</span><div class="feature-icon">AI</div><h3>Keputusan dapat dijelaskan</h3><p>Forward Chaining menyaring batas wajib, kemudian Fuzzy Logic memeringkat kandidat terbaik.</p></article>
+  </div>
+</div></section>
+
+<section class="section-pad soft-section"><div class="container workflow-grid">
+  <div class="workflow-copy reveal"><span class="eyebrow"><i></i>ALUR SEDERHANA</span><h2>Empat langkah menuju menu yang lebih masuk akal.</h2><p>Form dibuat bertahap agar mudah dipahami dan tidak terasa penuh, terutama saat diakses melalui desktop.</p><a class="text-link" href="/cek-gizi">Mulai konsultasi →</a></div>
+  <div class="workflow-list">
+    <div class="workflow-item reveal"><span>1</span><div><h3>Isi profil dan tujuan</h3><p>Usia, berat, tinggi, aktivitas, dan tujuan utama.</p></div></div>
+    <div class="workflow-item reveal delay-1"><span>2</span><div><h3>Atur budget dan alat</h3><p>Tentukan anggaran, waktu, dan peralatan yang tersedia.</p></div></div>
+    <div class="workflow-item reveal delay-2"><span>3</span><div><h3>Terapkan batasan bahan</h3><p>Alergi, preferensi, vegetarian, dan bahan tidak disukai.</p></div></div>
+    <div class="workflow-item reveal"><span>4</span><div><h3>Dapatkan hasil lengkap</h3><p>Menu, estimasi nutrisi, biaya, alasan, alternatif, dan belanja.</p></div></div>
+  </div>
+</div></section>
+
+<section class="section-pad"><div class="container cta-card reveal"><div><span class="eyebrow light"><i></i>MULAI SEKARANG</span><h2>Susun menu anak kos yang lebih rapi dan realistis.</h2><p>Buat akun gratis agar riwayat rekomendasi tersimpan dan bisa dibandingkan kembali.</p></div><div class="cta-actions"><a class="btn btn-light btn-lg" href="/cek-gizi">Cek Gizi</a>{% if not current_user %}<a class="btn btn-outline-light btn-lg" href="/daftar">Buat Akun</a>{% endif %}</div></div></section>
+{% endblock %}

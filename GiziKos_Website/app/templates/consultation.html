@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Cek Gizi — GiziKos{% endblock %}
+{% block content %}
+<section class="consult-hero"><div class="container"><div><span class="eyebrow"><i></i> KONSULTASI MENU CERDAS</span><h1>Bangun rencana makan yang sesuai dengan kehidupan kosmu.</h1><p>Empat langkah, sekitar dua menit. Setiap pembatasan akan divalidasi sebelum sistem memilih menu.</p></div><div class="consult-hero-note"><div class="consult-hero-note-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div><strong>Data aman</strong><span>{% if current_user %}Hasil akan disimpan ke akun {{ current_user.name }}.{% else %}Masuk agar riwayat dapat dibuka dari perangkat lain.{% endif %}</span></div></div></div></section>
+
+<section class="consult-section"><div class="container form-layout">
+  <aside class="form-aside"><div class="sticky-card">
+    <div class="progress-head"><div class="progress-ring"><span id="progressPercent">25%</span></div><div><small>PROGRES</small><strong id="progressTitle">Profil & tujuan</strong></div></div>
+    <ol class="wizard-nav" id="wizardNav">
+      <li class="active"><button type="button" data-step-target="0"><span>1</span><div><strong>Profil & tujuan</strong><small>Kenali kebutuhan umum</small></div></button></li>
+      <li><button type="button" data-step-target="1"><span>2</span><div><strong>Budget & alat</strong><small>Kondisi nyata di kos</small></div></button></li>
+      <li><button type="button" data-step-target="2"><span>3</span><div><strong>Alergi & preferensi</strong><small>Bahan yang harus dihindari</small></div></button></li>
+      <li><button type="button" data-step-target="3"><span>4</span><div><strong>Stok bahan</strong><small>Bahan yang sudah tersedia</small></div></button></li>
+    </ol>
+    <div class="aside-tip"><span>i</span><p><strong>Penting:</strong> alergi dan bahan tidak disukai otomatis dikeluarkan dari pilihan stok.</p></div>
+  </div></aside>
+
+  <div class="form-card">
+    {% if error %}<div class="alert alert-danger">{{ error }}</div>{% endif %}
+    <form method="post" action="/cek-gizi" id="consultationForm" novalidate>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <section class="wizard-step active" data-step="0" data-title="Profil & tujuan">
+        <div class="step-heading"><div><span>LANGKAH 1 DARI 4</span><h2>Profil dan tujuan utama</h2><p>Data dipakai untuk estimasi kebutuhan umum dan pemeringkatan menu, bukan diagnosis.</p></div><span class="step-icon">01</span></div>
+        <div class="form-grid two">
+          <label class="field full"><span>Nama panggilan</span><input type="text" name="name" value="{% if current_user %}{{ current_user.name }}{% elif form_data %}{{ form_data.name }}{% else %}Mahasiswa{% endif %}" placeholder="Contoh: Galang" required maxlength="80"></label>
+          <label class="field"><span>Usia</span><div class="input-suffix"><input type="number" name="age" min="18" max="60" value="21" required><em>tahun</em></div></label>
+          <div class="field"><span>Jenis kelamin</span><div class="segmented"><label><input type="radio" name="gender" value="male" checked><span>Laki-laki</span></label><label><input type="radio" name="gender" value="female"><span>Perempuan</span></label></div></div>
+          <label class="field"><span>Berat badan</span><div class="input-suffix"><input type="number" name="weight" min="31" max="199" step="0.1" value="60" required><em>kg</em></div></label>
+          <label class="field"><span>Tinggi badan</span><div class="input-suffix"><input type="number" name="height" min="131" max="219" step="0.1" value="165" required><em>cm</em></div></label>
+          <label class="field full"><span>Tingkat aktivitas</span><select name="activity_level" required><option value="low">Ringan — lebih banyak duduk, jarang olahraga</option><option value="medium" selected>Sedang — kuliah aktif dan olahraga 1–3×/minggu</option><option value="high">Tinggi — olahraga atau aktivitas fisik 4–6×/minggu</option></select></label>
+        </div>
+        <div class="field-group"><span class="group-label">Apa tujuan utamamu?</span><p class="group-help">Pilih satu tujuan. Penyesuaian bersifat bertahap dan informatif.</p><div class="goal-grid">
+          {% for value, icon, title, desc in [
+            ('balanced','✦','Pola makan seimbang','Memperbaiki komposisi dan variasi menu.'),
+            ('maintain','◎','Menjaga berat badan','Menjaga asupan mendekati kebutuhan umum.'),
+            ('lose','↘','Menurunkan berat badan','Defisit ringan dan bertahap, bukan diet ekstrem.'),
+            ('gain','↗','Menambah berat badan','Surplus ringan dengan makanan lebih padat energi.'),
+            ('muscle','◇','Mendukung massa otot','Prioritas protein dan energi yang memadai.'),
+            ('hemat','Rp','Menu paling hemat','Memaksimalkan nilai gizi dalam batas biaya.')
+          ] %}
+          <label class="goal-card"><input type="radio" name="goal" value="{{ value }}" {% if value == 'balanced' %}checked{% endif %}><span class="goal-icon">{{ icon }}</span><strong>{{ title }}</strong><small>{{ desc }}</small><i>✓</i></label>
+          {% endfor %}
+        </div></div>
+      </section>
+
+      <section class="wizard-step" data-step="1" data-title="Budget & alat">
+        <div class="step-heading"><div><span>LANGKAH 2 DARI 4</span><h2>Anggaran dan kondisi dapur kos</h2><p>Menu hanya dipilih jika alat, waktu, dan biayanya realistis.</p></div><span class="step-icon">02</span></div>
+        <div class="budget-builder">
+          <div class="budget-display"><div><small>ANGGARAN MAKAN PER HARI</small><strong id="budgetDisplay">Rp30.000</strong></div><span id="budgetTier">Cukup hemat</span></div>
+          <input type="hidden" name="daily_budget" id="dailyBudget" value="30000">
+          <input class="range-input" id="budgetRange" type="range" min="15000" max="100000" step="5000" value="30000" aria-label="Anggaran makan per hari">
+          <div class="range-labels"><span>Rp15 ribu</span><span>Rp100 ribu</span></div>
+          <div class="budget-presets" aria-label="Pilihan cepat anggaran">{% for value in [20000,25000,30000,40000,50000,75000] %}<button type="button" data-budget="{{ value }}">Rp{{ (value // 1000) }} ribu</button>{% endfor %}</div>
+          <p class="budget-hint">Anggaran dibagi otomatis: sarapan 25%, makan siang 40%, dan makan malam 35%.</p>
+        </div>
+        <div class="form-grid two top-gap">
+          <label class="field"><span>Jumlah waktu makan</span><select name="meal_count"><option value="3" selected>3 kali — sarapan, siang, malam</option><option value="2">2 kali — siang dan malam</option></select></label>
+          <label class="field"><span>Waktu memasak maksimal</span><select name="max_cooking_time"><option value="10">Maksimal 10 menit</option><option value="15">Maksimal 15 menit</option><option value="20">Maksimal 20 menit</option><option value="30" selected>Maksimal 30 menit</option><option value="45">Maksimal 45 menit</option><option value="60">Maksimal 60 menit</option></select></label>
+        </div>
+        <div class="field-group"><span class="group-label">Alat masak yang tersedia</span><p class="group-help">Pilih semua alat yang benar-benar bisa digunakan. Opsi “tidak punya alat” akan menonaktifkan seluruh rekomendasi.</p><div class="tool-grid">
+          {% for value, icon, label, desc in [
+            ('kompor','♨','Kompor','Sumber panas utama'),('panci','◯','Panci','Rebus dan sup'),('wajan','⌁','Wajan','Tumis dan goreng'),('rice-cooker','▣','Rice cooker','Nasi dan masak sederhana'),('ketel-listrik','♨','Ketel listrik','Seduh dan air panas'),('microwave','▤','Microwave','Pemanasan cepat'),('air-fryer','◫','Air fryer','Panggang minim minyak'),('sandwich-maker','▱','Sandwich maker','Roti panggang isi'),('blender','◇','Blender','Smoothie dan minuman'),('pisau-talenan','＋','Pisau & talenan','Potong dan menu tanpa masak')
+          ] %}
+          <label class="tool-card"><input type="checkbox" name="tools" value="{{ value }}" {% if value in ['kompor','panci','wajan'] %}checked{% endif %}><span>{{ icon }}</span><div><strong>{{ label }}</strong><small>{{ desc }}</small></div><i>✓</i></label>
+          {% endfor %}
+          <label class="tool-card no-tool"><input type="checkbox" name="tools" value="none" id="noTools"><span>×</span><div><strong>Tidak punya alat masak</strong><small>Sistem tidak akan memberi rekomendasi.</small></div><i>✓</i></label>
+        </div><div id="noToolsWarning" class="inline-warning" hidden>Tanpa alat masak, seluruh resep akan ditolak oleh aturan sistem pakar.</div></div>
+      </section>
+
+      <section class="wizard-step" data-step="2" data-title="Alergi & preferensi">
+        <div class="step-heading"><div><span>LANGKAH 3 DARI 4</span><h2>Alergi dan bahan yang dihindari</h2><p>Pembatasan ini bersifat wajib dan akan diterapkan kembali di backend.</p></div><span class="step-icon">03</span></div>
+        <div class="field-group"><span class="group-label">Alergi makanan</span><p class="group-help">Pilih hanya alergi yang benar-benar dimiliki. Seluruh bahan terkait otomatis diblokir dari stok.</p><div class="allergy-grid">
+          {% for value, icon, label in [('peanut','◉','Kacang tanah'),('egg','◌','Telur'),('milk','◇','Susu & olahan'),('seafood','≈','Ikan & makanan laut'),('gluten','≋','Gluten'),('soy','✣','Kedelai')] %}
+          <label class="allergy-card"><input type="checkbox" name="allergies" value="{{ value }}"><span>{{ icon }}</span><strong>{{ label }}</strong><i>✓</i></label>
+          {% endfor %}
+        </div></div>
+        <div class="preference-row"><label class="toggle-row"><input type="checkbox" name="vegetarian" id="vegetarianToggle"><span class="toggle"></span><div><strong>Saya vegetarian ovo-lakto</strong><small>Daging dan ikan ditolak; telur dan susu tetap diperbolehkan.</small></div></label><label class="toggle-row danger-toggle"><input type="checkbox" name="has_medical_condition"><span class="toggle"></span><div><strong>Saya memiliki kondisi medis khusus</strong><small>GiziKos akan menolak rekomendasi umum dan menyarankan tenaga kesehatan.</small></div></label></div>
+        <div class="field-group top-gap"><div class="group-head"><div><span class="group-label">Bahan yang tidak disukai</span><p class="group-help">Pilih bahan spesifik. Bahan tersebut tidak akan muncul lagi pada langkah stok.</p></div><span class="selection-count" id="dislikedCount">0 dipilih</span></div><label class="search-box"><span>⌕</span><input id="dislikedSearch" type="search" placeholder="Cari bahan yang tidak disukai"></label><div class="compact-food-list" id="dislikedList">
+          {% for category, foods in categories.items() %}{% if category != 'bumbu' %}<section class="compact-food-group"><h3>{{ category|title }}</h3><div>{% for food in foods %}<label class="dislike-chip" data-name="{{ food.name|lower }} {{ food.slug|lower }}"><input type="checkbox" name="disliked_ingredients" value="{{ food.slug }}"><span>{{ food.name }}</span></label>{% endfor %}</div></section>{% endif %}{% endfor %}
+        </div></div>
+      </section>
+
+      <section class="wizard-step" data-step="3" data-title="Stok bahan">
+        <div class="step-heading"><div><span>LANGKAH 4 DARI 4</span><h2>Bahan yang tersedia di kos</h2><p>Pilih stok yang benar-benar ada. Bahan terlarang sudah disembunyikan otomatis.</p><small style="display:block;margin-top:6px;color:var(--primary);font-size:0.75rem;font-weight:500;">* Memilih bahan berarti Anda memiliki bahan tersebut dalam jumlah yang cukup untuk satu porsi.</small></div><span class="step-icon">04</span></div>
+        <div class="stock-toolbar"><label class="search-box"><span>⌕</span><input id="ingredientSearch" type="search" placeholder="Cari telur, tempe, bayam, roti..."></label><div><strong id="stockCount">0</strong><span>bahan dipilih</span></div></div>
+        <div id="restrictionNotice" class="restriction-notice" hidden><span>!</span><p>Beberapa bahan disembunyikan karena alergi, preferensi vegetarian, atau daftar tidak disukai.</p></div>
+        <div class="ingredient-groups" id="ingredientGroups">
+          {% for category, foods in categories.items() %}
+          <section class="ingredient-group" data-category="{{ category }}"><div class="ingredient-group-head"><div><h3>{{ category|title }}</h3><small>{{ foods|length }} bahan</small></div><button type="button" class="select-category">Pilih semua yang aman</button></div><div class="ingredient-grid">
+            {% for food in foods %}<label class="ingredient-chip" data-name="{{ food.name|lower }} {{ food.slug|lower }}" data-slug="{{ food.slug }}" data-allergens="{{ food.allergens }}" data-vegetarian="{{ 'true' if 'vegetarian' in food.tags else 'false' }}"><input type="checkbox" name="available_ingredients" value="{{ food.slug }}"><span>{{ food.name }}</span><i>✓</i></label>{% endfor %}
+          </div></section>
+          {% endfor %}
+        </div>
+        <label class="final-consent-box" style="margin-top:25px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--surface-soft);display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color .2s;"><input type="checkbox" name="consent" required style="width:20px;height:20px;margin-top:2px;accent-color:var(--primary);cursor:pointer;flex-shrink:0;"><span><strong style="display:block;font-size:.82rem;color:var(--ink);line-height:1.4;">Saya memahami ruang lingkup GiziKos.</strong><small style="display:block;margin-top:4px;color:var(--muted);font-size:.72rem;line-height:1.55;">Hasil adalah rekomendasi menu umum dan estimasi informatif untuk mahasiswa dewasa sehat, bukan terapi medis.</small></span></label>
+      </section>
+
+      <div class="form-actions"><button class="btn btn-ghost" type="button" id="prevBtn" hidden>← Kembali</button><div class="action-spacer"></div><button class="btn btn-primary" type="button" id="nextBtn">Lanjutkan <b>→</b></button><button class="btn btn-primary btn-submit" type="submit" id="submitBtn" hidden><span class="submit-label">Buat Rekomendasi</span><span class="spinner"></span></button></div>
+    </form>
+  </div>
+</div></section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', path='js/consultation.js') }}?v={{ version }}" defer></script>{% endblock %}
