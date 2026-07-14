@@ -211,6 +211,12 @@ async def login_submit(request: Request, db: Session = Depends(get_db)):
     request.session.clear()
     if csrf_val:
         request.session["csrf_token"] = csrf_val
+
+    if user.email == "admingizikos":
+        request.session["admin"] = True
+        flash(request, f"Selamat datang kembali, Admin {user.name}!")
+        return RedirectResponse("/admin", status_code=303)
+
     request.session["user_id"] = user.id
     flash(request, f"Selamat datang kembali, {user.name}!")
     redirect_target = "/" if next_url == "/akun" else next_url

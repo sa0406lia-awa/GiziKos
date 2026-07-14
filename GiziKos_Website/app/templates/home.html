@@ -4,24 +4,82 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy reveal">
-
-      <h1>Makan lebih terarah, <span>tanpa bikin dompet kewalahan.</span></h1>
+      <div class="hero-stats-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 13px; height: 13px; color: var(--primary); margin-right: 4px;"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <strong>{{ stats.recipes }}+</strong> resep cerdas &amp; <strong>{{ stats.foods }}+</strong> bahan praktis
+      </div>
+      <h1>Makan sehat &amp; seimbang, <span>pas di kantong anak kos.</span></h1>
       <p class="lead">GiziKos menyusun menu berdasarkan tujuanmu, anggaran harian, aktivitas, alergi, alat masak, waktu memasak, dan bahan yang sudah tersedia.</p>
       <div class="hero-actions"><a class="btn btn-primary btn-lg" href="/cek-gizi">Mulai Cek Gizi <b>→</b></a><a class="btn btn-ghost btn-lg" href="/metode">Pelajari Cara Kerja</a></div>
-      <div class="hero-trust"><span><b>✓</b> Aman dari bahan alergi</span><span><b>✓</b> Sesuai alat masak</span><span><b>✓</b> Alasan rekomendasi transparan</span></div>
+      <div class="hero-trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width: 12px; height: 12px; margin-right: 6px; color: var(--primary); display: inline-block; vertical-align: middle;"><polyline points="20 6 9 17 4 12"/></svg>Aman dari bahan alergi</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width: 12px; height: 12px; margin-right: 6px; color: var(--primary); display: inline-block; vertical-align: middle;"><polyline points="20 6 9 17 4 12"/></svg>Sesuai alat masak</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width: 12px; height: 12px; margin-right: 6px; color: var(--primary); display: inline-block; vertical-align: middle;"><polyline points="20 6 9 17 4 12"/></svg>Alasan rekomendasi transparan</span>
+      </div>
     </div>
     <div class="hero-dashboard reveal delay-1" aria-label="Pratinjau dashboard hasil">
-      <div class="dashboard-window">
-        <div class="window-bar"><div><span></span><span></span><span></span></div><em>Ringkasan menu hari ini</em></div>
-        <div class="dashboard-head"><div><small>STATUS REKOMENDASI</small><h3>Seimbang & sesuai budget</h3></div><div class="score-circle"><span>92</span><small>/100</small></div></div>
-        <div class="dashboard-metrics"><div><span>Estimasi biaya</span><strong>Rp28.500</strong><small>dari budget Rp30.000</small></div><div><span>Estimasi energi</span><strong>2.050 kkal</strong><small>3 waktu makan</small></div></div>
-        <div class="mini-menu"><span class="menu-icon breakfast">☀</span><div><small>Sarapan</small><strong>Oat pisang susu</strong></div><em>8 menit</em></div>
-        <div class="mini-menu"><span class="menu-icon lunch">◐</span><div><small>Makan siang</small><strong>Nasi tempe kangkung</strong></div><em>20 menit</em></div>
-        <div class="mini-menu"><span class="menu-icon dinner">☾</span><div><small>Makan malam</small><strong>Sup tahu kentang</strong></div><em>25 menit</em></div>
-        <div class="dashboard-note"><span>AI</span><p><strong>Alasan utama</strong> Harga sesuai, alat tersedia, aman dari alergi, dan sejalan dengan tujuan.</p></div>
+      <div class="hero-dashboard-card">
+        <!-- Card Header -->
+        <div class="card-header">
+          <div class="user-info">
+            <span class="feature-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; color: #ffffff;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </span>
+            <div>
+              <strong>Keunggulan GiziKos</strong>
+              <p>Sistem Pakar Menu Anak Kos</p>
+            </div>
+          </div>
+          <span class="match-score">AI-Powered</span>
+        </div>
+
+        <!-- Feature List -->
+        <div class="features-preview-list">
+          <!-- Feature 1 -->
+          <div class="feature-preview-item">
+            <div class="feature-preview-icon budget-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4v-6h-4z"/></svg>
+            </div>
+            <div class="feature-preview-text">
+              <strong>Penyusun Budget Presisi</strong>
+              <p>Menghitung biaya bahan makanan dan membagi anggaran makan otomatis setiap hari.</p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-preview-item">
+            <div class="feature-preview-icon safety-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="feature-preview-text">
+              <strong>Filter Alergi &amp; Alat Masak</strong>
+              <p>Otomatis menyaring resep yang cocok dengan peralatan masak kos &amp; aman dari alergi.</p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-preview-item">
+            <div class="feature-preview-icon stock-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 5.5a7 7 0 0 1-9 12.5z"/></svg>
+            </div>
+            <div class="feature-preview-text">
+              <strong>Optimasi Stok Bahan Kos</strong>
+              <p>Mengutamakan rekomendasi resep dari sisa stok bahan makanan yang sudah kamu punya.</p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-preview-item">
+            <div class="feature-preview-icon nut-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="feature-preview-text">
+              <strong>Kepatuhan Gizi AKG</strong>
+              <p>Mengacu pada Permenkes RI No. 28/2019 untuk menjamin kecukupan kalori mahasiswa.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="float-badge badge-one"><strong>{{ stats.foods }}+</strong><span>bahan praktis</span></div>
-      <div class="float-badge badge-two"><strong>{{ stats.recipes }}+</strong><span>resep anak kos</span></div>
     </div>
   </div>
 </section>
@@ -29,12 +87,12 @@
 <section class="section-pad"><div class="container">
   <div class="section-heading center reveal"><span class="eyebrow"><i></i>DIRANCANG UNTUK KEHIDUPAN KOS</span><h2>Bagaimana GiziKos Menyesuaikan Menu Untukmu?</h2><p>GiziKos memahami kebutuhanmu sebagai anak kos, mulai dari kebutuhan nutrisi, budget, waktu, hingga bahan yang tersedia untuk memberikan rekomendasi menu yang praktis dan bergizi.</p></div>
   <div class="feature-grid">
-    <article class="feature-card reveal"><span class="feature-number">01</span><div class="feature-icon">◎</div><h3>Tentukan tujuan makanmu</h3><p>Pilih kebutuhanmu seperti menjaga berat badan, menambah berat badan, atau hidup lebih sehat. GiziKos akan menyesuaikan rekomendasi berdasarkan tujuanmu.</p></article>
-    <article class="feature-card reveal delay-1"><span class="feature-number">02</span><div class="feature-icon">Rp</div><h3>Sesuaikan dengan budget</h3><p>Masukkan perkiraan biaya makan yang kamu punya agar rekomendasi menu tetap sesuai kemampuan dan kebutuhan.</p></article>
-    <article class="feature-card reveal delay-2"><span class="feature-number">03</span><div class="feature-icon">⌁</div><h3>Gunakan alat yang tersedia</h3><p>Pilih alat masak yang tersedia di kos agar menu yang diberikan tetap mudah untuk dibuat.</p></article>
-    <article class="feature-card reveal"><span class="feature-number">04</span><div class="feature-icon">✓</div><h3>Hindari makanan yang tidak cocok</h3><p>Tambahkan alergi atau bahan yang tidak disukai agar rekomendasi makanan lebih aman dan sesuai.</p></article>
-    <article class="feature-card reveal delay-1"><span class="feature-number">05</span><div class="feature-icon">◷</div><h3>Atur waktu memasak</h3><p>Sesuaikan waktu yang kamu miliki agar mendapatkan menu yang cocok dengan aktivitas harian.</p></article>
-    <article class="feature-card reveal delay-2"><span class="feature-number">06</span><div class="feature-icon">💡</div><h3>Dapatkan rekomendasi dengan alasan jelas</h3><p>Setiap rekomendasi diberikan berdasarkan kebutuhan dan kondisi kamu sehingga mudah dipahami.</p></article>
+    <article class="feature-card reveal"><span class="feature-number">01</span><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3>Tentukan tujuan makanmu</h3><p>Pilih kebutuhanmu seperti menjaga berat badan, menambah berat badan, atau hidup lebih sehat. GiziKos akan menyesuaikan rekomendasi berdasarkan tujuanmu.</p></article>
+    <article class="feature-card reveal delay-1"><span class="feature-number">02</span><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Sesuaikan dengan budget</h3><p>Masukkan perkiraan biaya makan yang kamu punya agar rekomendasi menu tetap sesuai kemampuan dan kebutuhan.</p></article>
+    <article class="feature-card reveal delay-2"><span class="feature-number">03</span><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Gunakan alat yang tersedia</h3><p>Pilih alat masak yang tersedia di kos agar menu yang diberikan tetap mudah untuk dibuat.</p></article>
+    <article class="feature-card reveal"><span class="feature-number">04</span><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>Hindari makanan yang tidak cocok</h3><p>Tambahkan alergi atau bahan yang tidak disukai agar rekomendasi makanan lebih aman dan sesuai.</p></article>
+    <article class="feature-card reveal delay-1"><span class="feature-number">05</span><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Atur waktu memasak</h3><p>Sesuaikan waktu yang kamu miliki agar mendapatkan menu yang cocok dengan aktivitas harian.</p></article>
+    <article class="feature-card reveal delay-2"><span class="feature-number">06</span><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m10.607 10.607l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div><h3>Dapatkan rekomendasi dengan alasan jelas</h3><p>Setiap rekomendasi diberikan berdasarkan kebutuhan dan kondisi kamu sehingga mudah dipahami.</p></article>
   </div>
 </div></section>
 
@@ -49,5 +107,4 @@
   </div>
 </div></section>
 
-<section class="section-pad"><div class="container cta-card reveal"><div><span class="eyebrow light"><i></i>COBA SEKARANG</span><h2>Temukan menu makan yang pas untuk anak kos.</h2><p>Dapatkan rekomendasi menu sesuai kebutuhan, budget, dan bahan yang kamu punya.</p></div><div class="cta-actions"><a class="btn btn-light btn-lg" href="/cek-gizi">Cek Gizi</a>{% if not current_user %}<a class="btn btn-outline-light btn-lg" href="/daftar">Buat Akun</a>{% endif %}</div></div></section>
 {% endblock %}
