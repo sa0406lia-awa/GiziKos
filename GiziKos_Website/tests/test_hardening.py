@@ -398,7 +398,7 @@ def test_database_migration_idempotent():
         
         # Check that user and consultations still exist
         cursor.execute("SELECT COUNT(*) FROM users;")
-        assert cursor.fetchone()[0] == 1
+        assert cursor.fetchone()[0] == 2
         cursor.execute("SELECT COUNT(*) FROM consultations;")
         assert cursor.fetchone()[0] == 1
         

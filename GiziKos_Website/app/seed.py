@@ -11,7 +11,7 @@ from .config import DATA_DIR
 from .database import Base, engine, detect_metadata_sync_requirements
 from .models import Food, Recipe, RecipeIngredient, SystemSetting
 
-DATASET_VERSION = "2.2"
+DATASET_VERSION = "2.4"
 
 DEFAULT_SETTINGS = {
     "age_min": ("18", "Usia minimum pengguna umum GiziKos."),
@@ -125,6 +125,28 @@ def seed_database(db: Session, force: bool = False, force_metadata_sync: bool = 
         else:
             setting.description = description
     db.commit()
+
+    # Seed default admin user
+    import uuid
+    from .auth import hash_password
+    from .models import User
+    
+    admin_user = db.scalar(select(User).where(User.email == "admingizikos"))
+    if not admin_user:
+        admin = User(
+            id=str(uuid.uuid4()),
+            name="AdminGiziKos",
+            email="admingizikos",
+            password_hash=hash_password("admin123"),
+            active=True
+        )
+        db.add(admin)
+    else:
+        admin_user.password_hash = hash_password("admin123")
+        admin_user.name = "AdminGiziKos"
+        admin_user.active = True
+    db.commit()
+
 
 
 def _sync_foods(db: Session, path: Path) -> None:

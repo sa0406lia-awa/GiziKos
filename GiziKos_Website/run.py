@@ -12,7 +12,8 @@ import uvicorn
 def port_is_available(host: str, port: int) -> bool:
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            if os.name != "nt":
+                sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             sock.bind((host, port))
         return True
     except OSError:

@@ -40,9 +40,10 @@
       ]
     ],
     "steps": [
-      "Rebus telur sampai matang.",
-      "Tumis bawang putih dan bayam dengan sedikit minyak.",
-      "Sajikan bersama nasi hangat."
+      "Siapkan panci berisi air, masukkan telur ayam, dan rebus selama kurang lebih 10 menit hingga matang sempurna. Kupas kulitnya dan belah telur menjadi dua bagian.",
+      "Panaskan wajan dengan sedikit minyak goreng. Masukkan bawang putih yang telah dicincang halus, lalu tumis hingga mengeluarkan aroma harum.",
+      "Masukkan daun bayam yang telah dicuci bersih ke dalam wajan. Bumbui dengan sedikit garam dan kaldu bubuk, lalu tumis cepat selama 2-3 menit hingga bayam layu namun warnanya tetap hijau segar.",
+      "Sajikan tumis bayam gurih dan telur rebus berdampingan dengan sepiring nasi putih hangat."
     ]
   },
   {
@@ -74,8 +75,10 @@
       ]
     ],
     "steps": [
-      "Masak oatmeal bersama susu hingga mengental.",
-      "Tambahkan irisan pisang."
+      "Masukkan oatmeal instan ke dalam panci kecil.",
+      "Tuangkan susu UHT rendah lemak ke dalam panci, aduk rata, lalu masak di atas kompor dengan api kecil selama 5 menit sambil terus diaduk hingga oatmeal mengembang dan menjadi bubur kental.",
+      "Kupas pisang manis matang, lalu iris tipis-tipis menyerong atau bulat sesuai selera.",
+      "Tuang bubur oatmeal hangat ke dalam mangkuk saji, tata irisan buah pisang di atasnya secara rapi, lalu nikmati selagi hangat."
     ]
   },
   {
@@ -110,8 +113,10 @@
       ]
     ],
     "steps": [
-      "Masak telur dengan sedikit minyak.",
-      "Sajikan bersama roti dan irisan tomat."
+      "Panaskan wajan anti lengket (teflon) dengan sedikit minyak goreng menggunakan api sedang.",
+      "Pecahkan telur ayam langsung ke wajan, masak dengan gaya mata sapi (sunny side up) atau orak-arik sesuai selera Anda. Taburkan sedikit garam di atasnya, masak hingga tingkat kematangan yang diinginkan.",
+      "Cuci bersih tomat segar, lalu iris melintang menjadi beberapa lembaran bulat tipis.",
+      "Panggang roti gandum sebentar di atas teflon (opsional), tata telur mata sapi hangat dan irisan tomat segar di atasnya, lalu sajikan sebagai sarapan praktis."
     ]
   },
   {
@@ -150,8 +155,10 @@
       ]
     ],
     "steps": [
-      "Tumis tempe dengan sedikit kecap.",
-      "Sajikan bersama nasi dan pepaya."
+      "Potong tempe berbentuk kotak atau dadu sedang ukuran sekali suap.",
+      "Panaskan sedikit minyak goreng di wajan. Tumis tempe hingga bagian luarnya berwarna cokelat keemasan. Tambahkan kecap manis, garam, dan tuang sedikit air. Masak dengan api kecil hingga air menyusut dan bumbu meresap sempurna ke dalam tempe.",
+      "Kupas buah pepaya manis matang, buang bijinya, lalu potong daging buahnya berbentuk dadu ukuran siap santap.",
+      "Sajikan tumis tempe kecap manis hangat di piring bersama nasi putih hangat, ditemani potongan buah pepaya segar sebagai makanan pelengkap."
     ]
   },
   {
@@ -190,8 +197,10 @@
       ]
     ],
     "steps": [
-      "Rebus kentang dan wortel hingga lunak.",
-      "Masukkan telur, aduk, dan bumbui ringan."
+      "Kupas kentang dan wortel, lalu potong dadu kecil-kecil agar cepat matang.",
+      "Didihkan air di dalam panci. Masukkan potongan kentang, wortel, dan bawang putih iris. Rebus dengan api sedang selama 10-12 menit hingga tekstur kentang dan wortel menjadi empuk.",
+      "Pecahkan telur ayam langsung ke dalam kuah rebusan sup yang mendidih. Aduk perlahan secara memutar agar telur berserabut, lalu bumbui dengan sedikit garam dan merica bubuk. Masak kembali selama 2 menit.",
+      "Tuangkan sup kentang telur wortel yang gurih hangat ke dalam mangkuk saji, nikmati selagi hangat."
     ]
   },
   {
@@ -221,13 +230,15 @@
       ]
     ],
     "steps": [
-      "Potong apel.",
-      "Campurkan yogurt, oatmeal, dan apel."
+      "Cuci bersih buah apel merah segar, belah menjadi beberapa bagian, buang biji di tengahnya, lalu potong apel berbentuk dadu kecil-kecil.",
+      "Siapkan mangkuk saji berukuran sedang, masukkan yogurt plain dingin ke dalamnya.",
+      "Taburkan oatmeal instan di atas lapisan yogurt plain secara merata.",
+      "Tambahkan potongan buah apel merah segar di atasnya. Anda bisa mengaduknya secara perlahan sebelum disantap untuk perpaduan rasa asam, manis, dan renyah."
     ]
   },
   {
     "id": "sarapan-ricecooker-nasi-tahu",
-    "name": "Nasi Tahu Sayur Rice Cooker",
+    "name": "Nasi Tim Tahu Sawi Rice Cooker",
     "meal_type": "breakfast",
     "cooking_time": 20,
     "tools": [
@@ -261,8 +272,11 @@
       ]
     ],
     "steps": [
-      "Masukkan tahu, sawi, dan bumbu ke rice cooker.",
-      "Hangatkan bersama nasi hingga sayur layu."
+      "Potong tahu putih menjadi kotak-kotak kecil.",
+      "Potong sawi hijau menjadi bagian kecil-kecil, lalu cuci bersih.",
+      "Susun potongan tahu, sawi hijau, irisan bawang putih, dan kecap manis di atas nasi putih di dalam wadah rice cooker.",
+      "Nyalakan rice cooker ke mode 'warm' selama 15-20 menit hingga sawi hijau matang dan tahu menjadi lembut.",
+      "Sajikan nasi tim hangat setelah diaduk perlahan."
     ]
   },
   {
@@ -293,8 +307,10 @@
       ]
     ],
     "steps": [
-      "Oleskan selai kacang pada roti.",
-      "Tambahkan irisan pisang."
+      "Ambil dua lembar roti gandum berserat tinggi yang segar.",
+      "Oleskan selai kacang yang gurih secara merata pada salah satu sisi permukaan roti gandum sesuai ketebalan yang diinginkan.",
+      "Kupas pisang matang, potong tipis-tipis berbentuk lingkaran.",
+      "Tata potongan buah pisang di atas olesan selai kacang secara merata, lalu tutup dengan lembaran roti gandum kedua. Potong diagonal membentuk segitiga dan sajikan."
     ]
   },
   {
@@ -325,8 +341,10 @@
       ]
     ],
     "steps": [
-      "Rebus ubi dan telur sampai matang.",
-      "Sajikan bersama pepaya."
+      "Cuci bersih ubi jalar merah atau kuning di bawah air mengalir.",
+      "Rebus ubi jalar di panci berisi air mendidih selama 20-25 menit hingga bagian dalamnya empuk saat ditusuk dengan garpu. Angkat, kupas kulitnya, lalu potong-potong.",
+      "Di panci terpisah, rebus telur ayam dalam air mendidih selama 10 menit hingga matang sempurna, kupas lalu belah dua.",
+      "Potong buah pepaya matang menjadi ukuran dadu sedang. Sajikan ubi jalar rebus hangat bersama telur rebus dan buah pepaya manis segar."
     ]
   },
   {
@@ -356,8 +374,10 @@
       ]
     ],
     "steps": [
-      "Campur oatmeal dan susu dalam mangkuk aman microwave.",
-      "Panaskan bertahap lalu tambahkan pisang."
+      "Campurkan oatmeal instan dan susu UHT ke dalam mangkuk tahan panas yang aman digunakan untuk microwave.",
+      "Masukkan mangkuk ke dalam microwave, atur daya pada tingkat tinggi (high power), lalu panaskan selama 1.5 sampai 2 menit hingga susu meresap dan oat mengembang mengental.",
+      "Keluarkan mangkuk secara perlahan dan hati-hati dari microwave menggunakan kain alas mangkuk karena permukaannya akan panas.",
+      "Kupas pisang, potong bulat-bulat, lalu tata potongan pisang segar di atas oatmeal hangat sebagai pemanis alami sebelum dinikmati."
     ]
   },
   {
@@ -392,8 +412,10 @@
       ]
     ],
     "steps": [
-      "Susun tuna, timun, dan tomat di antara roti.",
-      "Panggang dengan sandwich maker."
+      "Tiriskan daging tuna kaleng dari minyak atau air rendamannya secara maksimal menggunakan saringan. Campurkan daging tuna dengan sedikit garam dan merica bubuk di wadah kecil.",
+      "Cuci bersih timun dan tomat merah, lalu potong melintang tipis-tipis berbentuk lingkaran.",
+      "Tata daging tuna kaleng secara merata di atas selembar roti gandum, tambahkan beberapa irisan timun dan tomat segar di atasnya, lalu tutup dengan roti gandum kedua.",
+      "Panggang sandwich menggunakan sandwich maker selama 3-5 menit hingga permukaan roti garing berwarna cokelat keemasan. Sajikan hangat."
     ]
   },
   {
@@ -423,8 +445,10 @@
       ]
     ],
     "steps": [
-      "Seduh oatmeal dengan air panas secukupnya.",
-      "Tambahkan susu dan pisang."
+      "Isi ketel listrik dengan air bersih secukupnya, nyalakan, dan tunggu hingga air mendidih otomatis.",
+      "Masukkan oatmeal instan ke dalam mangkuk saji, tuangkan air panas mendidih dari ketel secukupnya (sekitar 100-120 ml). Aduk rata, lalu tutup mangkuk rapat-rapat selama 3 menit hingga oat menyerap air dan menjadi lembut.",
+      "Buka penutup mangkuk, tuangkan susu UHT dingin ke dalam oatmeal hangat, aduk merata hingga teksturnya lembut lembut.",
+      "Tambahkan potongan buah pisang manis di atasnya untuk memberikan rasa manis alami sebelum disajikan."
     ]
   },
   {
@@ -463,9 +487,10 @@
       ]
     ],
     "steps": [
-      "Potong kentang dan tempe.",
-      "Masak di air fryer hingga matang.",
-      "Sajikan dengan tomat."
+      "Kupas kulit kentang dan cuci bersih. Potong kentang memanjang (seperti kentang goreng) dan potong tempe berbentuk dadu berukuran 2 cm.",
+      "Keringkan kentang dengan tisu dapur. Masukkan kentang dan tempe ke mangkuk, lumuri dengan sedikit minyak goreng dan garam, aduk hingga terbalut merata.",
+      "Tata kentang dan tempe di dalam keranjang air fryer tanpa saling tumpang tindih. Panggang pada suhu 180°C selama 15-20 menit. Kocok keranjang air fryer di menit ke-10 agar tingkat kematangan dan kerenyahannya merata.",
+      "Sajikan kentang dan tempe panggang air fryer yang renyah hangat bersama irisan tomat merah segar."
     ]
   },
   {
@@ -495,8 +520,10 @@
       ]
     ],
     "steps": [
-      "Susun keju pada roti.",
-      "Sajikan bersama apel."
+      "Ambil dua lembar roti gandum segar.",
+      "Letakkan satu lembar keju cheddar tipis (slice) di atas lembaran roti gandum pertama.",
+      "Cuci buah apel merah segar, iris daging buahnya tipis-tipis, lalu tata rapi potongan apel di atas keju cheddar.",
+      "Tutup dengan roti gandum kedua. Anda bisa langsung menyajikannya dingin atau memanggangnya sebentar di teflon tanpa minyak agar keju sedikit meleleh gurih."
     ]
   },
   {
@@ -527,8 +554,10 @@
       ]
     ],
     "steps": [
-      "Masukkan semua bahan ke blender.",
-      "Blender hingga halus."
+      "Kupas buah pisang matang, potong menjadi beberapa bagian kecil agar lebih mudah dihancurkan.",
+      "Masukkan potongan buah pisang, oatmeal instan, dan tuangkan susu UHT rendah lemak dingin ke dalam tabung blender.",
+      "Pasang blender dengan rapat, proses dengan kecepatan tinggi selama 1-2 menit hingga seluruh bahan hancur merata dan bertekstur kental halus tanpa ada gumpalan oat.",
+      "Tuangkan smoothie pisang oat dingin ke dalam gelas saji tinggi, sajikan segera selagi dingin."
     ]
   },
   {
@@ -570,9 +599,10 @@
       ]
     ],
     "steps": [
-      "Tumis ayam hingga matang.",
-      "Masukkan bayam dan bumbu.",
-      "Sajikan bersama nasi."
+      "Potong dada ayam fillet mentah berbentuk dadu kecil atau suwiran tebal agar cepat matang saat ditumis.",
+      "Panaskan sedikit minyak goreng di wajan anti lengket menggunakan api sedang. Masukkan bawang putih yang telah dicincang halus, tumis hingga harum kekuningan. Masukkan potongan dada ayam, aduk cepat dan masak hingga daging ayam berubah warna dan matang sempurna.",
+      "Masukkan daun bayam segar yang sudah dicuci bersih ke wajan, bumbui dengan garam dan kaldu bubuk. Tumis cepat menggunakan api besar selama 2 menit hingga bayam layu tetapi warnanya masih hijau cerah.",
+      "Sajikan tumis dada ayam bayam yang gurih berkuah ringan ini hangat bersama nasi putih hangat."
     ]
   },
   {
@@ -615,14 +645,15 @@
       ]
     ],
     "steps": [
-      "Tumis tempe hingga kecokelatan.",
-      "Masukkan kangkung dan kecap.",
-      "Sajikan bersama nasi."
+      "Potong tempe berbentuk balok korek api atau dadu kecil. Goreng atau tumis tempe di wajan dengan sedikit minyak hingga permukaannya agak kecokelatan, sisihkan di pinggir wajan.",
+      "Masukkan irisan bawang putih ke wajan, tumis hingga harum. Masukkan kangkung segar yang sudah dipotong dan dicuci bersih di bawah air mengalir.",
+      "Tambahkan kecap manis secara merata, sedikit garam, dan tuangkan 50 ml air matang. Aduk rata menggunakan api besar secara cepat agar kangkung tetap renyah.",
+      "Setelah kangkung layu dan bumbu meresap ke dalam tempe, angkat dan hidangkan tumis tempe kangkung bersama nasi putih hangat."
     ]
   },
   {
     "id": "siang-ricecooker-sarden",
-    "name": "Nasi Sarden Sayur Rice Cooker",
+    "name": "Nasi Tim Sarden Sayur Rice Cooker",
     "meal_type": "lunch",
     "cooking_time": 20,
     "tools": [
@@ -651,8 +682,10 @@
       ]
     ],
     "steps": [
-      "Masukkan sarden, sawi, dan tomat ke rice cooker.",
-      "Hangatkan bersama nasi sampai sayur matang."
+      "Cuci bersih sawi hijau dan potong-potong, serta iris tomat merah.",
+      "Masukkan sarden kaleng beserta kuah sausnya, potongan sawi, dan irisan tomat ke dalam wadah rice cooker di atas nasi putih.",
+      "Nyalakan rice cooker pada mode menghangatkan ('warm') selama 20 menit agar uap panas mematangkan sayuran dan meresapkan saus sarden ke dalam nasi.",
+      "Sajikan hangat selagi harum."
     ]
   },
   {
@@ -694,8 +727,10 @@
       ]
     ],
     "steps": [
-      "Rebus mi dan sayur.",
-      "Masukkan telur lalu bumbui ringan."
+      "Didihkan air di dalam panci. Rebus mi kering selama 3-4 menit hingga matang kenyal. Angkat mi, tiriskan, lalu sisihkan dalam mangkuk.",
+      "Didihkan air baru dalam panci kecil, masukkan bawang putih yang sudah digeprek kasar, potongan sawi hijau, dan tauge segar.",
+      "Pecahkan telur ayam secara hati-hati langsung ke dalam kuah rebusan sayur yang mendidih. Diamkan sebentar agar kuning telur setengah matang, atau aduk perlahan jika ingin kuahnya berserabut gurih.",
+      "Masukkan mi kering yang sudah direbus tadi ke dalam panci, beri garam dan merica bubuk secukupnya. Aduk rata selama 1 menit, matikan api, lalu tuangkan mi rebus hangat beserta kuah sayur ke mangkuk."
     ]
   },
   {
@@ -738,9 +773,10 @@
       ]
     ],
     "steps": [
-      "Tumis tahu dan buncis.",
-      "Tambahkan kecap serta sedikit air.",
-      "Sajikan bersama nasi."
+      "Potong tahu putih menjadi ukuran dadu sedang. Potong buncis segar secara melintang serong tipis.",
+      "Panaskan minyak goreng di wajan. Masukkan bawang putih cincang, tumis hingga harum. Masukkan buncis dan tahu putih, aduk perlahan-lahan agar potongan tahu tidak hancur.",
+      "Tambahkan kecap manis, garam, dan tuang sekitar 50 ml air matang ke wajan. Masak dengan api sedang selama 5-7 menit hingga air menyusut dan bumbu meresap ke dalam tahu.",
+      "Angkat tumisan dan sajikan tahu buncis manis gurih ini hangat bersama sepiring nasi putih."
     ]
   },
   {
@@ -782,9 +818,10 @@
       ]
     ],
     "steps": [
-      "Masak ikan hingga matang.",
-      "Tumis sawi ringan.",
-      "Sajikan bersama nasi."
+      "Bersihkan ikan kembung segar dari kotorannya, lumuri permukaan kulitnya dengan garam secukupnya agar gurih. Goreng ikan kembung dalam wajan berisi minyak panas hingga kering dan berwarna cokelat keemasan, tiriskan.",
+      "Panaskan sedikit minyak sisa di wajan baru, tumis bawang putih cincang hingga harum kekuningan.",
+      "Masukkan potongan sawi hijau segar dan tuangkan sedikit air. Beri garam secukupnya, tumis cepat menggunakan api besar selama 2 menit hingga sawi matang namun tetap berwarna hijau cerah.",
+      "Tata ikan kembung goreng renyah dan tumis sawi hijau di piring saji bersama sepiring nasi putih hangat."
     ]
   },
   {
@@ -822,8 +859,10 @@
       ]
     ],
     "steps": [
-      "Potong timun dan tomat.",
-      "Susun tuna dan sayur di atas nasi."
+      "Siapkan nasi putih hangat dalam mangkuk saji (bowl) ukuran personal.",
+      "Tiriskan daging tuna kaleng dari rendaman minyaknya. Masukkan daging tuna ke mangkuk kecil, tambahkan saus tomat, aduk rata.",
+      "Cuci bersih timun dan tomat merah segar, lalu potong-potong berbentuk dadu berukuran kecil.",
+      "Tata campuran daging tuna saus tomat dan potongan timun serta tomat segar secara berkelompok di atas nasi putih hangat. Sajikan sebagai rice bowl sehat praktis."
     ]
   },
   {
@@ -865,8 +904,10 @@
       ]
     ],
     "steps": [
-      "Bumbui lele ringan dan masak dengan air fryer.",
-      "Sajikan bersama nasi dan lalapan."
+      "Bersihkan ikan lele segar dari lendir dan kotorannya. Buat keratan menyilang di badan ikan lele, lalu lumuri dengan garam dan sedikit minyak goreng tipis di permukaan kulitnya.",
+      "Masukkan ikan lele ke keranjang air fryer secara mendatar. Panggang menggunakan air fryer pada suhu 190°C selama 20-25 menit hingga bagian luarnya kering renyah dan dagingnya matang merata.",
+      "Cuci bersih timun dan tomat segar, potong bulat menjadi lalapan pendamping.",
+      "Sajikan lele panggang sehat minim kolesterol ini bersama nasi putih hangat dan potongan lalapan segar."
     ]
   },
   {
@@ -909,14 +950,15 @@
       ]
     ],
     "steps": [
-      "Seduh atau rebus bihun.",
-      "Masak tahu dan sayur dalam satu panci.",
-      "Campurkan dan bumbui."
+      "Rendam bihun kering di dalam wadah berisi air hangat selama 5 menit hingga melunak dan lemas, tiriskan lalu sisihkan.",
+      "Potong tahu putih menjadi ukuran dadu kecil-kecil. Iris sawi hijau dan wortel secara tipis melintang.",
+      "Panaskan sedikit minyak di wajan, tumis bawang putih cincang hingga harum. Masukkan potongan tahu, wortel, sawi hijau, beri kecap manis, garam, dan tuangkan 50 ml air. Masak hingga wortel melunak empuk.",
+      "Masukkan bihun yang telah direndam tadi ke wajan. Aduk cepat secara merata dengan api kecil hingga seluruh bumbu meresap sempurna dan bihun berwarna kecokelatan rata. Sajikan."
     ]
   },
   {
     "id": "siang-ricecooker-ayam",
-    "name": "Nasi Ayam Sayur Rice Cooker",
+    "name": "Nasi Tim Ayam Sayur Rice Cooker",
     "meal_type": "lunch",
     "cooking_time": 30,
     "tools": [
@@ -949,8 +991,10 @@
       ]
     ],
     "steps": [
-      "Masukkan ayam suwir dan sayur ke rice cooker.",
-      "Hangatkan bersama nasi sampai sayur lunak."
+      "Potong wortel menjadi dadu kecil dan iris sawi hijau tipis-tipis.",
+      "Tata ayam suwir matang, potongan wortel, sawi hijau, dan kecap manis di atas permukaan nasi putih di dalam rice cooker.",
+      "Tutup dan biarkan rice cooker dalam mode menghangatkan ('warm') selama 25-30 menit hingga wortel menjadi empuk dan bumbu meresap ke dalam nasi.",
+      "Aduk nasi tim ayam hingga rata sebelum dihidangkan hangat."
     ]
   },
   {
@@ -993,9 +1037,10 @@
       ]
     ],
     "steps": [
-      "Tumis tempe dan brokoli.",
-      "Tambahkan kecap dan sedikit air.",
-      "Sajikan bersama nasi."
+      "Potong tempe berbentuk dadu berukuran 2 cm. Potong kuntum brokoli menjadi bagian kecil-kecil, lalu rendam di air garam selama 5 menit untuk membersihkannya, bilas dan tiriskan.",
+      "Panaskan minyak di wajan, tumis bawang putih cincang hingga harum. Masukkan potongan tempe dan kuntum brokoli ke dalam wajan.",
+      "Tambahkan kecap manis, garam, merica bubuk, dan sedikit air matang agar brokoli cepat matang melunak.",
+      "Masak dengan api sedang selama 5 menit hingga kuah meresap dan brokoli empuk, lalu hidangkan tumisan bersama sepiring nasi putih hangat."
     ]
   },
   {
@@ -1029,8 +1074,10 @@
       ]
     ],
     "steps": [
-      "Rebus mi dengan setengah bumbu.",
-      "Tambahkan telur, sawi, dan tauge."
+      "Didihkan air bersih dalam panci sedang menggunakan api besar.",
+      "Masukkan mi instan kering ke dalam panci, rebus selama 2 menit hingga mi mulai terurai.",
+      "Pecahkan telur ayam langsung ke dalam air rebusan mi instan. Masukkan potongan sawi hijau dan tauge segar ke panci. Rebus kembali selama 1.5 menit hingga sayuran layu dan telur matang.",
+      "Matikan api, tiriskan sebagian air rebusan (sesuai selera kuah), lalu masukkan bumbu bawaan mi instan (disarankan gunakan setengah bungkus saja untuk membatasi asupan garam/natrium), aduk rata dan hidangkan selagi hangat."
     ]
   },
   {
@@ -1073,8 +1120,10 @@
       ]
     ],
     "steps": [
-      "Rebus ayam dan kentang.",
-      "Tambahkan wortel, kol, serta bumbu."
+      "Kupas kentang dan wortel, potong dadu ukuran sedang. Potong dada ayam fillet mentah berbentuk dadu kecil.",
+      "Didihkan air dalam panci sedang. Masukkan potongan dada ayam mentah, rebus selama 5 menit hingga kaldu alami ayam keluar di permukaan air.",
+      "Masukkan potongan kentang dan wortel ke dalam panci, rebus dengan api sedang selama 15 menit hingga keduanya empuk saat ditusuk. Masukkan irisan kol putih dan bawang putih geprek.",
+      "Tambahkan garam dan kaldu bubuk rasa ayam secukupnya ke dalam kuah sup. Masak kembali selama 2 menit hingga matang rata, lalu sajikan hangat di mangkuk."
     ]
   },
   {
@@ -1113,8 +1162,10 @@
       ]
     ],
     "steps": [
-      "Susun ayam, sayur, dan keju pada roti.",
-      "Panggang dengan sandwich maker."
+      "Siapkan dua lembar roti gandum utuh segar. Tata lembaran keju cheddar secara merata di atas permukaan roti gandum pertama.",
+      "Letakkan dada ayam suwir matang secara melimpah di atas keju cheddar.",
+      "Tata irisan tomat merah segar dan timun secara merata di atas ayam suwir sebagai lapisan sayuran.",
+      "Tutup dengan roti gandum kedua, panggang sandwich menggunakan alat pembuat sandwich (sandwich maker) selama 4-5 menit hingga permukaan roti garing dan keju di dalamnya meleleh gurih."
     ]
   },
   {
@@ -1152,9 +1203,10 @@
       ]
     ],
     "steps": [
-      "Campur tahu, jamur, sawi, dan kecap.",
-      "Panaskan dalam wadah aman microwave sampai matang.",
-      "Sajikan dengan nasi."
+      "Potong tahu putih menjadi ukuran dadu sedang. Cuci bersih jamur tiram, lalu suwir kasar menggunakan tangan. Potong sawi hijau melintang.",
+      "Tata potongan tahu, suwiran jamur tiram, dan sawi hijau secara rapi di dalam mangkuk tahan panas yang aman untuk microwave. Tuangkan kecap manis di atasnya dan beri 2 sendok makan air matang.",
+      "Tutup mangkuk dengan piring kecil tahan panas agar uapnya terperangkap. Masukkan ke microwave, panaskan dengan daya tinggi selama 4-5 menit hingga tahu lembut dan jamur tiram layu matang.",
+      "Keluarkan dengan hati-hati menggunakan sarung tangan pelindung, lalu sajikan tumisan tahu jamur microwave ini hangat bersama nasi putih."
     ]
   },
   {
@@ -1197,9 +1249,10 @@
       ]
     ],
     "steps": [
-      "Tumis kol dan tomat.",
-      "Masukkan telur dan aduk hingga matang.",
-      "Sajikan dengan nasi."
+      "Cuci bersih kol putih segar dan tomat merah. Iris tipis daun kol, dan potong tomat merah menjadi bentuk dadu kecil.",
+      "Panaskan sedikit minyak goreng di wajan anti lengket. Tumis bawang putih cincang, irisan kol, dan potongan tomat hingga kol layu dan tomat mulai melunak berair.",
+      "Pecahkan telur ayam langsung ke wajan di atas sayuran. Aduk cepat secara konstan agar telur hancur dan matang menyatu (scrambled) bersama kol dan tomat. Beri sedikit garam.",
+      "Sajikan tumis orak-arik telur kol tomat yang gurih hangat ini di atas sepiring nasi putih hangat."
     ]
   },
   {
@@ -1242,14 +1295,15 @@
       ]
     ],
     "steps": [
-      "Rebus jagung dan bumbu.",
-      "Masukkan tahu serta bayam.",
-      "Sajikan bersama nasi."
+      "Kupas kulit jagung manis dan cuci bersih. Sisir biji jagung menggunakan pisau tajam (atau potong melintang menjadi bagian kecil). Potong tahu putih menjadi dadu sedang.",
+      "Didihkan air di dalam panci bersama irisan bawang merah dan bawang putih hingga tercium aroma harum. Masukkan jagung manis, rebus dengan api sedang selama 5-7 menit hingga biji jagung matang.",
+      "Masukkan potongan tahu putih dan daun bayam segar yang telah disiangi dan dicuci bersih ke panci. Tambahkan garam secukupnya.",
+      "Masak sup bening selama 2-3 menit hingga bayam layu dan kuah mendidih kembali, lalu hidangkan sup hangat ini bersama nasi putih."
     ]
   },
   {
     "id": "malam-ricecooker-tempe",
-    "name": "Nasi Tempe Tauge Rice Cooker",
+    "name": "Nasi Tim Tempe Tauge Rice Cooker",
     "meal_type": "dinner",
     "cooking_time": 18,
     "tools": [
@@ -1283,8 +1337,11 @@
       ]
     ],
     "steps": [
-      "Masukkan tempe, tauge, dan bumbu ke rice cooker.",
-      "Hangatkan hingga tauge matang."
+      "Potong tempe menjadi dadu kecil agar bumbu meresap.",
+      "Cuci bersih tauge, tiriskan, lalu campurkan bersama potongan tempe, irisan bawang putih, dan kecap manis.",
+      "Masukkan campuran tempe dan tauge tersebut ke dalam rice cooker berisi nasi putih hangat.",
+      "Tutup rice cooker, tekan mode 'cook' atau biarkan dalam mode 'warm' selama 15-18 menit hingga tauge layu dan aroma harum tercium.",
+      "Aduk rata nasi bersama tempe dan tauge sebelum disajikan hangat."
     ]
   },
   {
@@ -1326,27 +1383,31 @@
       ]
     ],
     "steps": [
-      "Masak ikan sampai matang.",
-      "Tumis kangkung ringan.",
-      "Sajikan bersama nasi."
+      "Bersihkan ikan kembung segar dari isi perutnya, lumuri garam. Goreng ikan kembung dalam wajan berisi minyak panas yang melimpah hingga kering garing dan matang rata, tiriskan.",
+      "Kurangi minyak di wajan, sisakan sedikit saja untuk menumis bawang putih cincang hingga harum kekuningan.",
+      "Masukkan daun kangkung segar yang sudah dicuci bersih dan ditiriskan. Beri garam secukupnya, tumis cepat menggunakan api besar selama 2 menit hingga kangkung layu merata.",
+      "Tata ikan kembung goreng kering berdampingan dengan tumis kangkung gurih, lalu sajikan hangat bersama sepiring nasi putih."
     ]
   },
   {
     "id": "malam-oat-telur-sayur",
-    "name": "Oat Gurih Telur Sayur",
+    "name": "Nasi Sup Telur Serabut Sayuran",
     "meal_type": "dinner",
     "cooking_time": 12,
     "tools": [
       "kompor",
-      "panci"
+      "panci",
+      "pisau-talenan"
     ],
     "tags": [
-      "praktis"
+      "praktis",
+      "hemat",
+      "hangat"
     ],
     "ingredients": [
       [
-        "oatmeal",
-        60
+        "nasi-putih",
+        150
       ],
       [
         "telur",
@@ -1361,13 +1422,20 @@
         80
       ],
       [
+        "bawang-putih",
+        3
+      ],
+      [
         "garam",
         1
       ]
     ],
     "steps": [
-      "Masak oatmeal dengan air.",
-      "Tambahkan telur dan sayur, lalu bumbui."
+      "Kupas wortel dan potong bulat tipis, serta iris sawi hijau. Geprek dan cincang halus bawang putih.",
+      "Didihkan air secukupnya (sekitar 250-300 ml) di dalam panci. Masukkan cincangan bawang putih dan potongan wortel, lalu rebus selama 5 menit dengan api sedang hingga wortel mulai empuk.",
+      "Pecahkan telur ayam langsung ke dalam air rebusan yang mendidih. Aduk kuah sup secara memutar dengan cepat menggunakan garpu agar telur matang berserabut halus dan gurih.",
+      "Masukkan potongan sawi hijau dan garam secukupnya. Rebus kembali selama 2 menit hingga sawi layu matang, lalu matikan api.",
+      "Sajikan sup telur serabut gurih hangat ini di dalam mangkuk besar bersama sepiring nasi putih hangat."
     ]
   },
   {
@@ -1401,8 +1469,10 @@
       ]
     ],
     "steps": [
-      "Potong sayur.",
-      "Campur dengan tuna dan sajikan bersama roti."
+      "Tiriskan daging tuna kaleng dari air atau minyak rendamannya menggunakan sendok. Letakkan daging tuna di mangkuk kecil, taburkan sedikit lada bubuk atau merica, aduk rata.",
+      "Cuci bersih buah tomat merah dan timun segar, lalu potong berbentuk dadu kecil-kecil.",
+      "Masukkan potongan tomat dan timun ke mangkuk berisi tuna kaleng, aduk hingga tercampur merata (menjadi tuna salad dingin).",
+      "Sajikan tuna salad segar ini di samping lembaran roti gandum, atau susun di tengahnya sebagai sandwich tuna dingin yang menyehatkan."
     ]
   },
   {
@@ -1442,9 +1512,10 @@
       ]
     ],
     "steps": [
-      "Rebus ubi hingga matang.",
-      "Tumis tempe dan kangkung.",
-      "Sajikan bersama."
+      "Cuci bersih ubi jalar di bawah air mengalir. Rebus ubi jalar utuh dalam panci berisi air mendidih selama 20 menit hingga empuk saat ditusuk garpu. Kupas kulitnya lalu potong bulat tebal.",
+      "Potong tempe berbentuk balok korek api tipis. Tumis bawang putih cincang dan tempe di wajan dengan sedikit minyak hingga permukaannya kecokelatan gurih.",
+      "Masukkan daun kangkung segar yang telah dicuci bersih ke wajan, bumbui dengan garam dan sedikit air. Tumis dengan api besar selama 2 menit hingga kangkung layu.",
+      "Sajikan potongan ubi jalar rebus manis hangat di piring saji berdampingan dengan tumis tempe kangkung yang gurih."
     ]
   },
   {
@@ -1483,9 +1554,10 @@
       ]
     ],
     "steps": [
-      "Potong kentang dan bumbui ayam.",
-      "Masak keduanya dengan air fryer.",
-      "Sajikan bersama lalapan."
+      "Potong dada ayam fillet mentah menjadi lembaran steak tipis. Lumuri daging ayam dengan garam dan merica bubuk. Kupas kentang dan potong memanjang (seperti kentang goreng).",
+      "Masukkan potongan kentang dan dada ayam ke wadah terpisah, lumuri masing-masing dengan sedikit minyak goreng tipis secara merata menggunakan kuas makanan.",
+      "Tata dada ayam dan kentang secara mendatar di dalam wadah pemanggang air fryer tanpa saling menumpuk. Panggang pada suhu 180°C selama 15-20 menit hingga kentang renyah dan ayam matang kecokelatan.",
+      "Sajikan dada ayam dan kentang panggang air fryer hangat bersama lalapan potongan timun dan tomat merah segar."
     ]
   },
   {
@@ -1523,8 +1595,10 @@
       ]
     ],
     "steps": [
-      "Rebus bihun dan sayur.",
-      "Masukkan telur, aduk, dan bumbui."
+      "Rendam bihun kering di dalam wadah berisi air hangat selama 5 menit hingga teksturnya melunak kenyal, tiriskan airnya lalu sisihkan.",
+      "Kupas wortel dan potong dadu kecil, serta potong melintang sawi hijau.",
+      "Didihkan air di panci kecil bersama bawang putih cincang, masukkan potongan wortel dan sawi hijau, rebus selama 3 menit hingga wortel mulai empuk.",
+      "Masukkan bihun yang telah direndam tadi ke panci, lalu pecahkan telur ayam langsung ke dalam rebusan air bihun tersebut. Aduk rata secara perlahan agar telur matang berserabut gurih, beri garam secukupnya, angkat sup bihun telur hangat dan sajikan."
     ]
   },
   {
@@ -1562,8 +1636,10 @@
       ]
     ],
     "steps": [
-      "Masukkan semua bahan dan air ke rice cooker.",
-      "Masak hingga kentang lunak."
+      "Kupas kentang dan wortel, lalu potong dadu ukuran sedang. Potong tahu putih dan kol sesuai selera.",
+      "Masukkan potongan kentang, wortel, tahu putih, kol, garam, dan air secukupnya ke dalam panci rice cooker.",
+      "Tutup rice cooker dan tekan tombol 'cook'. Masak selama 20-25 menit hingga kentang dan wortel menjadi empuk.",
+      "Sup tahu kentang hangat siap disajikan langsung dari rice cooker."
     ]
   },
   {
@@ -1606,9 +1682,10 @@
       ]
     ],
     "steps": [
-      "Tumis tempe dan jamur.",
-      "Masukkan sawi dan kecap.",
-      "Sajikan dengan nasi."
+      "Potong tempe berbentuk dadu berukuran 2 cm. Suwir-suwir kasar jamur tiram segar menggunakan jari tangan, dan potong melintang sawi hijau segar.",
+      "Panaskan sedikit minyak goreng di wajan. Tumis bawang putih iris hingga harum, lalu masukkan potongan tempe. Masak hingga tempe agak berkulit kecokelatan.",
+      "Masukkan suwiran jamur tiram dan sawi hijau ke dalam wajan. Tambahkan kecap manis, garam, dan tuangkan sedikit air matang.",
+      "Masak dengan api sedang selama 5 menit sambil sesekali diaduk hingga bumbu meresap, jamur matang lembut, lalu sajikan hangat dengan sepiring nasi putih."
     ]
   },
   {
@@ -1645,9 +1722,10 @@
       ]
     ],
     "steps": [
-      "Campur telur, bayam, dan tomat dalam wadah aman microwave.",
-      "Panaskan bertahap sampai telur matang.",
-      "Sajikan dengan nasi."
+      "Cuci bersih daun bayam segar di bawah air mengalir, lalu potong tomat merah menjadi irisan tipis melintang bulat.",
+      "Pecahkan telur ayam ke dalam mangkuk tahan panas yang aman untuk microwave. Kocok lepas telur menggunakan garpu bersama sedikit garam dan merica bubuk hingga berbusa.",
+      "Masukkan daun bayam dan irisan tomat ke dalam kocokan telur, aduk rata. Tutup mangkuk rapat menggunakan piring kecil tahan panas.",
+      "Masukkan ke microwave, panaskan selama 2-3 menit pada daya sedang hingga omelet telur sayur mengembang matang sempurna. Sajikan hangat berdampingan dengan nasi putih."
     ]
   },
   {
@@ -1686,8 +1764,10 @@
       ]
     ],
     "steps": [
-      "Iris tempe matang dan sayur.",
-      "Susun semua bahan pada roti lalu panggang."
+      "Potong tempe menjadi lembaran tipis lebar. Panggang lembaran tempe di atas teflon dengan olesan sedikit minyak tipis hingga kedua permukaannya matang kecokelatan kering, angkat.",
+      "Iris melintang tipis tomat merah dan timun segar berbentuk lingkaran.",
+      "Tata tempe panggang gurih, selembar keju cheddar slice, irisan tomat, dan timun secara rapi di antara dua lembar roti gandum segar.",
+      "Panggang sandwich menggunakan sandwich maker selama 3-4 menit hingga permukaan roti garing dan keju cheddar di dalamnya meleleh gurih. Potong menjadi dua bagian segitiga sebelum disajikan."
     ]
   },
   {
@@ -1724,8 +1804,10 @@
       ]
     ],
     "steps": [
-      "Seduh bihun dan sayur dengan air mendidih dalam wadah tertutup.",
-      "Tiriskan lalu tambahkan tuna dan bumbu ringan."
+      "Masukkan air bersih secukupnya ke dalam ketel listrik, nyalakan dan tunggu hingga air mendidih otomatis.",
+      "Tata bihun kering, wortel yang diiris sangat tipis (agar cepat matang), dan potongan sawi hijau di dalam mangkuk keramik besar. Siram dengan air panas mendidih dari ketel hingga semua terendam. Tutup mangkuk rapat-rapat selama 5 menit hingga bihun dan wortel matang melunak, tiriskan seluruh air seduhannya.",
+      "Tiriskan daging tuna kaleng dari minyaknya, lalu campurkan ke dalam bihun seduh hangat di dalam mangkuk.",
+      "Beri sedikit garam dan lada bubuk, aduk rata secara perlahan menggunakan garpu hingga tercampur rata, lalu hidangkan selagi hangat."
     ]
   },
   {
@@ -1763,8 +1845,10 @@
       ]
     ],
     "steps": [
-      "Gunakan tahu matang siap makan.",
-      "Potong bahan dan susun bersama roti serta buah."
+      "Siapkan tahu putih matang siap makan (atau kukus tahu putih sebentar dalam wadah tertutup hingga hangat lalu tiriskan), potong tahu berbentuk dadu sedang.",
+      "Cuci bersih timun dan tomat segar, potong berbentuk dadu kecil. Kupas buah pepaya matang, potong dadu manis.",
+      "Campurkan potongan tahu putih hangat, timun, dan tomat merah segar di mangkuk saji, beri taburan garam dan lada bubuk tipis-tipis sebagai salad tahu segar.",
+      "Sajikan salad tahu segar yang menyehatkan ini bersama dua lembar roti gandum utuh dan potongan buah pepaya manis matang sebagai hidangan penutup."
     ]
   },
   {

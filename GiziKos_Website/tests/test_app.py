@@ -312,3 +312,34 @@ def test_repetition_penalty_in_combinations():
         payload_hemat = {**BASE_PAYLOAD, "goal": "hemat", "daily_budget": 20000}
         res_hemat = client.post("/api/recommend", json=payload_hemat)
         assert res_hemat.status_code == 200
+
+
+def test_admin_login_via_user_login():
+    with TestClient(app, follow_redirects=False) as client:
+        csrf_login = get_csrf_token(client, "/login")
+        RATE_LIMIT_DATA.clear()
+        
+        # Test incorrect password
+        res_fail = client.post("/login", data={
+            "email": "AdminGiziKos",
+            "password": "wrongpassword",
+            "csrf_token": csrf_login,
+        })
+        assert res_fail.status_code == 401
+        assert "tidak sesuai" in res_fail.text
+
+        # Test correct admin password
+        RATE_LIMIT_DATA.clear()
+        res_success = client.post("/login", data={
+            "email": "AdminGiziKos",
+            "password": "admin123",
+            "csrf_token": csrf_login,
+        })
+        assert res_success.status_code == 303
+        assert res_success.headers["location"] == "/admin"
+        
+        # Check admin dashboard accessibility after login
+        admin_page = client.get("/admin")
+        assert admin_page.status_code == 200
+        assert "Dashboard pengelolaan" in admin_page.text
+

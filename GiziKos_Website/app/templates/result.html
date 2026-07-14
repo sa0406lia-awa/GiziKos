@@ -358,7 +358,7 @@
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
-  .side-card-title > span {
+  .side-card-title > span, .side-card-title > svg {
     display: none !important;
   }
   .side-card-title h3 {
@@ -409,7 +409,7 @@
 <section class="result-hero">
   <div class="container result-hero-grid">
     <div>
-      <span class="eyebrow"><i></i> HASIL SISTEM PAKAR</span>
+      <span class="eyebrow"><i></i>HASIL SISTEM PAKAR</span>
       <h1>Rencana menu untuk {{ result.profile.name }} sudah siap.</h1>
       <p>{{ result.message }}</p>
       <div class="result-actions">
@@ -439,13 +439,16 @@
     {% if result.warnings %}
       <div class="warning-stack">
         {% for warning in result.warnings %}
-          <div class="alert alert-warning"><span>!</span>{{ warning }}</div>
+          <div class="alert alert-warning">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px; color: #D97706; flex-shrink: 0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            {{ warning }}
+          </div>
         {% endfor %}
       </div>
     {% endif %}
     <div class="metric-grid result-metrics">
       <article class="metric-card">
-        <span class="metric-icon">Rp</span>
+        <span class="metric-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; color: var(--primary);"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
         <div>
           <small>ESTIMASI BIAYA</small>
           <strong>Rp{{ result.totals.cost|format_currency }}</strong>
@@ -453,7 +456,7 @@
         </div>
       </article>
       <article class="metric-card">
-        <span class="metric-icon">⚡</span>
+        <span class="metric-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; color: #F59E0B;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
         <div>
           <small>ENERGI MENU</small>
           <strong>{{ result.totals.energy|round|int }} kkal</strong>
@@ -461,7 +464,7 @@
         </div>
       </article>
       <article class="metric-card">
-        <span class="metric-icon">P</span>
+        <span class="metric-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; color: #10B981;"><path d="M12 3v18M12 5l7 2M12 5L5 7M19 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM5 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></span>
         <div>
           <small>PROTEIN</small>
           <strong>{{ result.totals.protein|round(1) }} g</strong>
@@ -469,7 +472,7 @@
         </div>
       </article>
       <article class="metric-card" title="Skor digunakan untuk membandingkan kandidat menu berdasarkan aturan sistem dan bukan merupakan probabilitas medis atau ukuran akurasi klinis.">
-        <span class="metric-icon">✦</span>
+        <span class="metric-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; color: #6366F1;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
         <div>
           <small>KECOCOKAN RELATIF ⓘ</small>
           <strong>{{ result.totals.average_score|round|int }}/100</strong>
@@ -482,7 +485,7 @@
       <div class="result-main">
         <div class="section-heading inline">
           <div>
-            <span class="eyebrow"><i></i> RENCANA MENU HARIAN</span>
+            <span class="eyebrow"><i></i>RENCANA MENU HARIAN</span>
             <h2>Menu harian terpilih</h2>
           </div>
           <span class="result-status status-{{ result.status }}">
@@ -502,7 +505,13 @@
                 <div class="menu-card-head">
                   <div class="meal-title">
                     <span class="menu-icon {{ menu.meal_type }}">
-                      {% if menu.meal_type == 'breakfast' %}☀{% elif menu.meal_type == 'lunch' %}◐{% else %}☾{% endif %}
+                      {% if menu.meal_type == 'breakfast' %}
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                      {% elif menu.meal_type == 'lunch' %}
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><path d="M12 2v2M4.93 4.93l1.41 1.41M2 12h2M6.34 17.66l-1.41 1.41"/><path d="M12 10a6 6 0 1 1-6 6c0-3 2.5-5.5 6-6z"/></svg>
+                      {% else %}
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                      {% endif %}
                     </span>
                     <div>
                       <small>{{ menu.meal_label|upper }} (Porsi {{ menu.portion_multiplier }}x)</small>
@@ -580,7 +589,7 @@
       <aside class="result-aside">
         <section class="side-card profile-card">
           <div class="side-card-title">
-            <span>◎</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; color: var(--primary);"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             <h3>Ringkasan profil</h3>
           </div>
           <dl>
@@ -596,7 +605,7 @@
 
         <section class="side-card">
           <div class="side-card-title">
-            <span>Rp</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; color: var(--primary);"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             <h3>Penggunaan anggaran</h3>
           </div>
           <div class="budget-bar">
@@ -611,7 +620,7 @@
 
         <section class="side-card">
           <div class="side-card-title">
-            <span>＋</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; color: var(--primary);"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             <h3>Daftar belanja</h3>
           </div>
           {% if result.shopping_list %}
@@ -633,7 +642,7 @@
 
         <section class="side-card">
           <div class="side-card-title">
-            <span>AI</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; color: var(--primary);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
             <h3>Keputusan inferensi</h3>
           </div>
           <details open class="rule-details-accordion" style="margin-bottom:12px">

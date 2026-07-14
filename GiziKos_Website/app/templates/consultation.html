@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Cek Gizi — GiziKos{% endblock %}
 {% block content %}
-<section class="consult-hero"><div class="container"><div><span class="eyebrow"><i></i> KONSULTASI MENU CERDAS</span><h1>Bangun rencana makan yang sesuai dengan kehidupan kosmu.</h1><p>Empat langkah, sekitar dua menit. Setiap pembatasan akan divalidasi sebelum sistem memilih menu.</p></div><div class="consult-hero-note"><div class="consult-hero-note-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div><strong>Data aman</strong><span>{% if current_user %}Hasil akan disimpan ke akun {{ current_user.name }}.{% else %}Masuk agar riwayat dapat dibuka dari perangkat lain.{% endif %}</span></div></div></div></section>
+<section class="page-hero compact">
+  <div class="container narrow">
+    <span class="eyebrow"><i></i>KONSULTASI MENU CERDAS</span>
+    <h1>Bangun rencana makan yang sesuai dengan kehidupan kosmu.</h1>
+    <p>Empat langkah, sekitar dua menit. Setiap pembatasan akan divalidasi sebelum sistem memilih menu.</p>
+  </div>
+</section>
 
 <section class="consult-section"><div class="container form-layout">
   <aside class="form-aside"><div class="sticky-card">
@@ -57,9 +63,9 @@
           <label class="field"><span>Jumlah waktu makan</span><select name="meal_count"><option value="3" selected>3 kali — sarapan, siang, malam</option><option value="2">2 kali — siang dan malam</option></select></label>
           <label class="field"><span>Waktu memasak maksimal</span><select name="max_cooking_time"><option value="10">Maksimal 10 menit</option><option value="15">Maksimal 15 menit</option><option value="20">Maksimal 20 menit</option><option value="30" selected>Maksimal 30 menit</option><option value="45">Maksimal 45 menit</option><option value="60">Maksimal 60 menit</option></select></label>
         </div>
-        <div class="field-group"><span class="group-label">Alat masak yang tersedia</span><p class="group-help">Pilih semua alat yang benar-benar bisa digunakan. Opsi “tidak punya alat” akan menonaktifkan seluruh rekomendasi.</p><div class="tool-grid">
+        <div class="field-group"><span class="group-label">Alat masak yang tersedia</span><p class="group-help">Pilih semua alat yang benar-benar bisa digunakan. Opsi "Tidak punya alat masak" akan menonaktifkan seluruh rekomendasi.</p><div class="tool-grid">
           {% for value, icon, label, desc in [
-            ('kompor','♨','Kompor','Sumber panas utama'),('panci','◯','Panci','Rebus dan sup'),('wajan','⌁','Wajan','Tumis dan goreng'),('rice-cooker','▣','Rice cooker','Nasi dan masak sederhana'),('ketel-listrik','♨','Ketel listrik','Seduh dan air panas'),('microwave','▤','Microwave','Pemanasan cepat'),('air-fryer','◫','Air fryer','Panggang minim minyak'),('sandwich-maker','▱','Sandwich maker','Roti panggang isi'),('blender','◇','Blender','Smoothie dan minuman'),('pisau-talenan','＋','Pisau & talenan','Potong dan menu tanpa masak')
+            ('kompor','♨','Kompor','Sumber panas utama'),('panci','◯','Panci','Rebus dan sup'),('wajan','⌁','Wajan','Tumis dan goreng'),('rice-cooker','▣','Rice Cooker','Nasi dan masak sederhana'),('ketel-listrik','♨','Ketel Listrik','Seduh dan air panas'),('microwave','▤','Microwave','Pemanasan cepat'),('air-fryer','◫','Air Fryer','Panggang minim minyak'),('sandwich-maker','▱','Sandwich Maker','Roti panggang isi'),('blender','◇','Blender','Smoothie dan minuman'),('pisau-talenan','＋','Pisau & Talenan','Potong dan menu tanpa masak')
           ] %}
           <label class="tool-card"><input type="checkbox" name="tools" value="{{ value }}" {% if value in ['kompor','panci','wajan'] %}checked{% endif %}><span>{{ icon }}</span><div><strong>{{ label }}</strong><small>{{ desc }}</small></div><i>✓</i></label>
           {% endfor %}

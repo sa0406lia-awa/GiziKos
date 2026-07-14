@@ -209,14 +209,14 @@ def fuzzy_score(candidate: CandidateResult, user: ConsultationInput, settings: d
 
     memberships = {
         "budget_fit": {
-            "low": right_shoulder(budget_ratio, 0.90, 1.20),
+            "low": left_shoulder(budget_ratio, 0.60, 0.90),
             "medium": triangle(budget_ratio, 0.60, 0.85, 1.10),
-            "high": left_shoulder(budget_ratio, 0.60, 0.90),
+            "high": right_shoulder(budget_ratio, 0.90, 1.20),
         },
         "time_fit": {
-            "low": right_shoulder(time_ratio, 0.85, 1.15),
+            "low": left_shoulder(time_ratio, 0.45, 0.80),
             "medium": triangle(time_ratio, 0.45, 0.75, 1.05),
-            "high": left_shoulder(time_ratio, 0.45, 0.80),
+            "high": right_shoulder(time_ratio, 0.85, 1.15),
         },
         "coverage": {
             "low": left_shoulder(coverage, 0.20, 0.45),
@@ -226,11 +226,11 @@ def fuzzy_score(candidate: CandidateResult, user: ConsultationInput, settings: d
     }
 
     fuzzy_rules = [
-        ("F01", min(memberships["budget_fit"]["high"], memberships["time_fit"]["high"], memberships["coverage"]["high"]), 95),
-        ("F02", min(memberships["budget_fit"]["high"], memberships["coverage"]["medium"]), 84),
-        ("F03", min(memberships["budget_fit"]["medium"], memberships["time_fit"]["high"]), 79),
+        ("F01", min(memberships["budget_fit"]["low"], memberships["time_fit"]["low"], memberships["coverage"]["high"]), 95),
+        ("F02", min(memberships["budget_fit"]["low"], memberships["coverage"]["medium"]), 84),
+        ("F03", min(memberships["budget_fit"]["medium"], memberships["time_fit"]["low"]), 79),
         ("F04", min(memberships["budget_fit"]["medium"], memberships["coverage"]["medium"]), 72),
-        ("F05", max(memberships["budget_fit"]["low"], memberships["time_fit"]["low"]), 42),
+        ("F05", max(memberships["budget_fit"]["high"], memberships["time_fit"]["high"]), 42),
         ("F06", memberships["coverage"]["low"], 55),
     ]
     active_rules = [{"code": code, "strength": round(strength, 4), "output": output} for code, strength, output in fuzzy_rules if strength > 0]

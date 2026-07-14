@@ -1,6 +1,6 @@
 .venv/
 venv/
-__pycache__/
+_pycache_/
 *.py[cod]
 .pytest_cache/
 .coverage
@@ -21,3 +21,5 @@ scratch/
 Thumbs.db
 *.zip
 *.sha256
+*.docx
+~$*.docx
